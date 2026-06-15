@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using TrainPass.Customers.Exceptions;
 using TrainPass.Customers.Models;
 using TrainPass.Customers.Services;
@@ -16,7 +17,8 @@ namespace TrainPass.Customers.Controllers
             _query = query;
         }
 
-        [HttpGet("all")]
+        [HttpGet("allCustomers")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<List<Customer>>> GetCustomers()
         {
             try

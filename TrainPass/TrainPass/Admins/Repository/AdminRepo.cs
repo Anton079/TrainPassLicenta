@@ -4,7 +4,7 @@ using TrainPass.Data;
 
 namespace TrainPass.Admins.Repository
 {
-    public class AdminRepo:IAdminRepo
+    public class AdminRepo : IAdminRepo
     {
         private readonly IMapper _mapper;
         private readonly AppDbContext _db;
@@ -15,9 +15,5 @@ namespace TrainPass.Admins.Repository
             _db = db;
         }
 
-        //public async Task<CustomerRequest> CreateCustomerTicket()
-        //{
-
-        //}
     }
 }

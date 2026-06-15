@@ -24,6 +24,7 @@ namespace TrainPass.Stations.Controllers
             }
 
             [HttpGet("getStations")]
+            [Authorize(Roles = "Customer, Admin")]
             public async Task<ActionResult<GetAllStationsDto>> GetAllStations()
             {
                 try
@@ -37,6 +38,7 @@ namespace TrainPass.Stations.Controllers
             }
 
             [HttpPost("createStation")]
+            [Authorize(Roles = "Admin")]
             public async Task<ActionResult<StationRequest>> CreateStation(StationRequest request)
             {
                 try

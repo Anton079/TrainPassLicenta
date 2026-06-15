@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="TrainSchedules\Service\" />
     <Folder Include="Trains\Exceptions\" />
   </ItemGroup>
 

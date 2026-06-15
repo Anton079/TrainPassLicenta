@@ -8,5 +8,15 @@
         //Station
         public const string StationNotFoundException = "Station/s nu a putut fi gasit!";
         public const string StationAlreadyExistException = "Station deja exista!";
+
+        //Tickets
+        public const string SeatAlreadyTakenException = "Locul selectat este deja ocupat pentru aceasta cursa.";
+        public const string NoAvailableSeatsException = "Nu mai exista locuri disponibile pentru aceasta cursa.";
+        public const string TicketNotFoundException = "Biletele nu au fost gasite.";
+
+        //Train
+
+        //TrainSchedule
+        public const string TrainScheduleNotFoundException = "Cursa selectata nu a fost gasita.";
     }
 }
