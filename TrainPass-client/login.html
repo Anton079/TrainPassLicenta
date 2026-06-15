@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>TrainPass - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+
+    <div class="auth-container">
+
+        <div class="auth-left">
+            <h1>🚆 TrainPass</h1>
+            <p>Cauta curse, cumpara bilete si gestioneaza calatoriile tale rapid.</p>
+        </div>
+
+        <div class="auth-card">
+            <h2>Autentificare</h2>
+            <p class="auth-subtitle">Alege tipul de cont si intra in aplicatie.</p>
+
+            <div class="auth-form">
+                <input id="email" type="email" placeholder="Email">
+                <input id="password" type="password" placeholder="Parola">
+
+                <div class="auth-buttons">
+                    <button id="btn-login-customer">Login Customer</button>
+                    <button id="btn-login-admin" class="dark-btn">Login Admin</button>
+                </div>
+            </div>
+
+            <p id="message"></p>
+
+            <p class="auth-link">
+                Nu ai cont?
+                <a href="register.html">Creeaza cont</a>
+            </p>
+
+            <div class="admin-info">
+                <p>Admin default</p>
+                <span>admin@trainpass.com / admin123</span>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/login.js"></script>
+
+</body>
+</html>

@@ -99,3 +99,4 @@ C:\mycode\facultate\Licenta\TrainPass\TrainPass\obj\Debug\net8.0\refint\TrainPas
 C:\mycode\facultate\Licenta\TrainPass\TrainPass\obj\Debug\net8.0\TrainPass.pdb
 C:\mycode\facultate\Licenta\TrainPass\TrainPass\obj\Debug\net8.0\TrainPass.genruntimeconfig.cache
 C:\mycode\facultate\Licenta\TrainPass\TrainPass\obj\Debug\net8.0\ref\TrainPass.dll
+C:\mycode\facultate\Licenta\TrainPass\TrainPass\obj\Debug\net8.0\TrainPass.sourcelink.json

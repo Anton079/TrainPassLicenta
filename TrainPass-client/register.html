@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>TrainPass - Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+
+    <div class="auth-container">
+
+        <div class="auth-left">
+            <h1>🚆 TrainPass</h1>
+            <p>Creeaza un cont si cumpara bilete de tren rapid, simplu si sigur.</p>
+        </div>
+
+        <div class="auth-card">
+            <h2>Creare cont</h2>
+            <p class="auth-subtitle">Completeaza datele pentru a crea un cont de client.</p>
+
+            <div class="auth-form">
+                <input id="firstName" type="text" placeholder="Prenume">
+                <input id="lastName" type="text" placeholder="Nume">
+                <input id="email" type="email" placeholder="Email">
+                <input id="password" type="password" placeholder="Parola">
+
+                <button id="btn-register">Creeaza cont</button>
+            </div>
+
+            <p id="message"></p>
+
+            <p class="auth-link">
+                Ai deja cont?
+                <a href="login.html">Autentificare</a>
+            </p>
+        </div>
+
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/register.js"></script>
+
+</body>
+</html>

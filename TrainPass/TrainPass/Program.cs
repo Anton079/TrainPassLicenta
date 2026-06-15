@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System.Security.Claims;
 using System.Text;
 using TrainPass.Admins.Models;
 using TrainPass.Auth.Services;
@@ -61,6 +62,16 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseMySql(
@@ -74,7 +85,8 @@ builder.Services.AddFluentMigratorCore()
     {
         runner.AddMySql5()
             .WithGlobalConnectionString(connectionString)
-            .ScanIn(typeof(Program).Assembly).For.Migrations();
+            .ScanIn(typeof(Program).Assembly)
+            .For.Migrations();
     })
     .AddLogging(logging =>
     {
@@ -131,11 +143,24 @@ builder.Services.AddAuthentication(options =>
 
         IssuerSigningKey = new SymmetricSecurityKey(
             Encoding.UTF8.GetBytes(jwtKey)
-        )
+        ),
+
+        RoleClaimType = ClaimTypes.Role,
+        NameClaimType = ClaimTypes.Email
     };
 });
 
-builder.Services.AddAuthorization();
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("Customer", policy =>
+        policy.RequireRole("Customer"));
+
+    options.AddPolicy("Admin", policy =>
+        policy.RequireRole("Admin"));
+
+    options.AddPolicy("CustomerOrAdmin", policy =>
+        policy.RequireRole("Customer", "Admin"));
+});
 
 var app = builder.Build();
 
@@ -179,6 +204,8 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
+
+app.UseCors("AllowFrontend");
 
 app.UseAuthentication();
 app.UseAuthorization();

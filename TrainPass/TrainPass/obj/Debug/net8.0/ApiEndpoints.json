@@ -1,8 +1,8 @@
 [
   {
     "ContainingType": "TrainPass.Auth.Controllers.AuthController",
-    "Method": "Login",
-    "RelativePath": "api/v1/auth/login",
+    "Method": "LoginAdmin",
+    "RelativePath": "api/v1/auth/login-admin",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -15,7 +15,33 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "TrainPass.Auth.DTO.AuthResponse",
+        "Type": "TrainPass.Auth.Dtos.AuthResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TrainPass.Auth.Controllers.AuthController",
+    "Method": "LoginCustomer",
+    "RelativePath": "api/v1/auth/login-customer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "TrainPass.Auth.Dtos.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TrainPass.Auth.Dtos.AuthResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -41,7 +67,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "TrainPass.Auth.DTO.AuthResponse",
+        "Type": "TrainPass.Auth.Dtos.AuthResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -54,7 +80,7 @@
   {
     "ContainingType": "TrainPass.Customers.Controllers.ControllerCustomer",
     "Method": "GetCustomers",
-    "RelativePath": "api/v1/customers/all",
+    "RelativePath": "api/v1/customers/allCustomers",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -62,6 +88,273 @@
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.List\u00601[[TrainPass.Customers.Models.Customer, TrainPass, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TrainPass.Tickets.Controllers.ControllerTicket",
+    "Method": "GetAllTickets",
+    "RelativePath": "api/v1/tickets/allTickets",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "TrainPass.Tickets.Dtos.GetAllTicketsDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TrainPass.Tickets.Controllers.ControllerTicket",
+    "Method": "BuyTicket",
+    "RelativePath": "api/v1/tickets/buyTicket",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "TrainPass.Tickets.Dtos.TicketRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TrainPass.Tickets.Dtos.TicketResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TrainPass.Tickets.Controllers.ControllerTicket",
+    "Method": "CancelTicket",
+    "RelativePath": "api/v1/tickets/cancelTicket/{ticketId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ticketId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TrainPass.Tickets.Dtos.TicketResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TrainPass.Tickets.Controllers.ControllerTicket",
+    "Method": "GetMyTickets",
+    "RelativePath": "api/v1/tickets/my-tickets",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "TrainPass.Tickets.Dtos.GetAllTicketsDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TrainPass.TrainSchedules.Controllers.ControllerTrainSchedule",
+    "Method": "CreateTrainSchedule",
+    "RelativePath": "api/v1/train-schedules/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "TrainPass.TrainSchedules.Dtos.TrainScheduleRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TrainPass.TrainSchedules.Dtos.TrainScheduleResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TrainPass.TrainSchedules.Controllers.ControllerTrainSchedule",
+    "Method": "DeleteTrainSchedule",
+    "RelativePath": "api/v1/train-schedules/delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TrainPass.TrainSchedules.Controllers.ControllerTrainSchedule",
+    "Method": "AllTrainSchedule",
+    "RelativePath": "api/v1/train-schedules/get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "TrainPass.TrainSchedules.Dtos.GetAllTrainSchedule",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TrainPass.TrainSchedules.Controllers.ControllerTrainSchedule",
+    "Method": "SearchTrainSchedules",
+    "RelativePath": "api/v1/train-schedules/search",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "departureStationId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "arrivalStationId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "date",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TrainPass.TrainSchedules.Dtos.GetAllTrainSchedule",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TrainPass.TrainSchedules.Controllers.ControllerTrainSchedule",
+    "Method": "UpdateTrainSchedule",
+    "RelativePath": "api/v1/train-schedules/update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "TrainPass.TrainSchedules.Dtos.TrainScheduleRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TrainPass.TrainSchedules.Dtos.TrainScheduleResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TrainPass.Trains.Controllers.ControllerTrain",
+    "Method": "CreateTrain",
+    "RelativePath": "api/v1/trains/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "TrainPass.Trains.Dtos.TrainRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TrainPass.Trains.Dtos.TrainResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TrainPass.Trains.Controllers.ControllerTrain",
+    "Method": "GetAllTrains",
+    "RelativePath": "api/v1/trains/get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "TrainPass.Trains.Dtos.GetAllTrainsDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
