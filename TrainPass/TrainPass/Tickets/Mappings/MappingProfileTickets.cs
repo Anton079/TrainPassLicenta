@@ -10,8 +10,6 @@ namespace TrainPass.Tickets.Mappings
         {
             CreateMap<TicketRequest, Ticket>();
             CreateMap<Ticket, TicketResponse>();
-            CreateMap<TicketResponse, Ticket>();
-            CreateMap<Ticket, GetAllTicketsDto>();
         }
     }
 }

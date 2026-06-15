@@ -2,6 +2,7 @@
 using System.Data.Entity;
 using TrainPass.Data;
 using TrainPass.TrainSchedules.Dtos;
+using TrainPass.TrainSchedules.Models;
 
 namespace TrainPass.TrainSchedules.Repository
 {
@@ -27,14 +28,19 @@ namespace TrainPass.TrainSchedules.Repository
             };
         }
 
-        public async Task<TrainScheduleRequest> CreateTrainSchedule()
+        public async Task<TrainSchedule> CreateTrainSchedule(TrainSchedule trainSchedule)
         {
+            _db.TrainSchedules.Add(trainSchedule);
+            await _db.SaveChangesAsync();
 
+            return trainSchedule;
         }
 
-        public async Task<TrainScheduleRequest> TrainScheduleExists()
+        public async Task<bool> TrainScheduleExists(int trainScheduleId)
         {
-
+            return await _db.TrainSchedules.AnyAsync(t => trainScheduleId == t.Id);
         }
+
+        
     }
 }

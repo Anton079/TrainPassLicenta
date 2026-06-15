@@ -35,8 +35,6 @@ namespace TrainPass.Tickets.Service
 
             var savedTicket = await _repo.CreateTicket(ticket);
 
-            await _repo.DecreaseAvailableSeats(request.TrainScheduleId);
-
             return _mapper.Map<TicketResponse>(savedTicket);
         }
     }
