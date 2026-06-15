@@ -1,70 +1,109 @@
 .auth-page {
     min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 420px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
 }
 
 .auth-info {
-    background: linear-gradient(135deg, #2563eb, #0f172a);
-    color: white;
-    padding: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 100%;
+    max-width: 440px;
+    position: relative;
+    overflow: hidden;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-bottom: none;
+    border-radius: 22px 22px 0 0;
+    padding: 30px 34px 22px;
+}
+
+.auth-info::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 34px;
+    right: 34px;
+    height: 4px;
+    background: #2563eb;
+    border-radius: 0 0 10px 10px;
 }
 
 .auth-info h1 {
-    font-size: 46px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
+    color: #1d4ed8;
+    font-size: 36px;
+    letter-spacing: -1px;
 }
 
 .auth-info p {
-    color: #dbeafe;
-    font-size: 18px;
-    max-width: 520px;
+    margin-bottom: 0;
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 .auth-card {
+    width: 100%;
+    max-width: 440px;
     background: white;
-    padding: 34px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    border: 1px solid #e2e8f0;
+    border-radius: 0 0 22px 22px;
+    padding: 30px 34px 34px;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
 }
 
 .auth-card h2 {
     margin-bottom: 8px;
+    color: #0f172a;
+    font-size: 25px;
 }
 
 .auth-card p {
     color: #64748b;
+    line-height: 1.5;
 }
 
 .auth-card input {
     margin-bottom: 14px;
 }
 
+.auth-card button {
+    width: 100%;
+    margin-top: 4px;
+}
+
 .button-row {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 10px;
+    margin-top: 4px;
 }
 
 .auth-link {
-    margin-top: 16px;
-    margin-bottom: 0;
+    margin: 22px 0 0;
+    text-align: center;
+    font-size: 15px;
 }
 
-@media (max-width: 900px) {
+.auth-link a {
+    margin-left: 4px;
+}
+
+@media (max-width: 520px) {
     .auth-page {
-        grid-template-columns: 1fr;
+        padding: 16px;
     }
 
-    .auth-info {
-        padding: 36px 24px;
-    }
-
+    .auth-info,
     .auth-card {
-        padding: 28px 24px;
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .auth-info h1 {
+        font-size: 32px;
     }
 }

@@ -1,922 +1,891 @@
-const stationNames = {
-    101: "București Nord",
-    102: "Ploiești Vest",
-    103: "Brașov",
-    104: "Constanța",
-    105: "Sibiu",
-    106: "Cluj-Napoca",
-    107: "Iași",
-    108: "Timișoara Nord",
-    109: "Craiova",
-    110: "Arad",
-    111: "Oradea",
-    112: "Galați",
-    113: "Suceava Nord",
-    114: "Târgu Mureș",
-    115: "Baia Mare"
-};
+let stations = [];
+let trains = [];
+let schedules = [];
+let myTickets = [];
+let allTickets = [];
+let customers = [];
 
-let loadedSchedules = [];
-let loadedTickets = [];
-let currentSeatsInfo = null;
-let lastBoughtTickets = [];
+document.addEventListener("DOMContentLoaded", startApp);
 
-startPage();
+async function startApp() {
+    if (!isLoggedIn()) {
+        window.location.href = "login.html";
+        return;
+    }
 
-async function startPage() {
-    checkAuth();
-    showUserInfo();
+    showUserData();
     showSectionsByRole();
-    addEvents();
-    toggleReturnDate();
+    setEvents();
 
+    await loadStations();
+    await loadTrains();
     await loadSchedules();
 
-    if (getRole() === "Customer") {
+    if (isCustomer()) {
         await loadMyTickets();
     }
 
-    if (getRole() === "Admin") {
+    if (isAdmin()) {
         await loadAllTickets();
+        await loadCustomers();
     }
+
+    updateDashboard();
 }
 
-function addEvents() {
-    document.getElementById("btn-logout").addEventListener("click", logout);
-    document.getElementById("btn-search-schedules").addEventListener("click", searchSchedules);
-    document.getElementById("btn-buy-ticket").addEventListener("click", buyTickets);
-    document.getElementById("round-trip").addEventListener("change", toggleReturnDate);
-    document.getElementById("ticket-seat-count").addEventListener("change", loadSeatsInfo);
-    document.getElementById("search-departure").addEventListener("change", clearSearchErrors);
-    document.getElementById("search-arrival").addEventListener("change", clearSearchErrors);
-    document.getElementById("search-date").addEventListener("change", clearSearchErrors);
-    document.getElementById("return-date").addEventListener("change", clearSearchErrors);
-    document.getElementById("btn-print-last-ticket").addEventListener("click", function () {
-        printTickets(lastBoughtTickets);
-    });
-    document.getElementById("btn-save-last-ticket").addEventListener("click", function () {
-        printTickets(lastBoughtTickets);
-    });
-}
-
-function checkAuth() {
-    if (!isLoggedIn()) {
-        window.location.href = "login.html";
-    }
-}
-
-function showUserInfo() {
-    const email = getEmail();
-    const role = getRole();
-    const badge = document.getElementById("role-badge");
-
-    document.getElementById("user-info").innerText = email;
-
-    if (role === "Admin") {
-        badge.innerText = "Administrator";
-    } else {
-        badge.innerText = "Utilizator";
-    }
+function showUserData() {
+    setText("user-email", getEmail());
+    setText("user-role", getRole());
 }
 
 function showSectionsByRole() {
-    const role = getRole();
-    const customerSections = document.querySelectorAll(".customer-section");
     const adminSections = document.querySelectorAll(".admin-section");
+    const customerSections = document.querySelectorAll(".customer-section");
 
-    if (role === "Customer") {
-        adminSections.forEach(section => section.style.display = "none");
-    }
+    adminSections.forEach(function (section) {
+        section.style.display = isAdmin() ? "" : "none";
+    });
 
-    if (role === "Admin") {
-        customerSections.forEach(section => section.style.display = "none");
-    }
+    customerSections.forEach(function (section) {
+        section.style.display = isCustomer() ? "" : "none";
+    });
 }
 
-function logout() {
-    removeAuthData();
-    window.location.href = "login.html";
+function setEvents() {
+    click("btn-logout", logout);
+    click("btn-search", searchSchedules);
+    click("btn-clear-search", loadSchedules);
+    click("btn-buy-ticket", buyTicket);
+    click("btn-print-ticket", printTicket);
+    click("btn-create-train", createTrain);
+    click("btn-create-station", createStation);
+    click("btn-create-schedule", createSchedule);
 }
 
-function toggleReturnDate() {
-    const checked = document.getElementById("round-trip").checked;
-    const returnDate = document.getElementById("return-date");
-
-    if (checked) {
-        returnDate.disabled = false;
-    } else {
-        returnDate.disabled = true;
-        returnDate.value = "";
-        returnDate.classList.remove("input-error");
+async function loadStations() {
+    try {
+        const data = await apiGet("/admin/stations/getStations");
+        stations = getList(data, "stationList");
+    } catch {
+        stations = getDefaultStations();
     }
 
-    clearSearchErrors();
+    fillStationSelect("search-departure");
+    fillStationSelect("search-arrival");
+    fillStationSelect("schedule-departure");
+    fillStationSelect("schedule-arrival");
+    renderStations();
+    updateDashboard();
 }
 
-function clearSearchErrors() {
-    document.getElementById("search-departure").classList.remove("input-error");
-    document.getElementById("search-arrival").classList.remove("input-error");
-    document.getElementById("search-date").classList.remove("input-error");
-    document.getElementById("return-date").classList.remove("input-error");
-    document.getElementById("search-error").innerText = "";
-}
-
-function validateSearchFields() {
-    let valid = true;
-
-    const departure = document.getElementById("search-departure");
-    const arrival = document.getElementById("search-arrival");
-    const date = document.getElementById("search-date");
-    const returnDate = document.getElementById("return-date");
-    const roundTrip = document.getElementById("round-trip").checked;
-
-    clearSearchErrors();
-
-    if (departure.value === "") {
-        departure.classList.add("input-error");
-        valid = false;
+async function loadTrains() {
+    try {
+        const data = await apiGet("/trains/get");
+        trains = getList(data, "trainList");
+    } catch {
+        trains = [];
     }
 
-    if (arrival.value === "") {
-        arrival.classList.add("input-error");
-        valid = false;
-    }
-
-    if (date.value === "") {
-        date.classList.add("input-error");
-        valid = false;
-    }
-
-    if (roundTrip && returnDate.value === "") {
-        returnDate.classList.add("input-error");
-        valid = false;
-    }
-
-    if (!valid) {
-        document.getElementById("search-error").innerText = "Completează câmpurile marcate.";
-    }
-
-    return valid;
+    fillTrainSelect();
+    renderTrains();
+    updateDashboard();
 }
 
 async function loadSchedules() {
     try {
-        showEmptyRow("schedules-table", "Se încarcă datele...", 6);
-
         const data = await apiGet("/train-schedules/get");
-        const schedules = getSchedulesArray(data);
-
-        schedules.forEach(schedule => {
-            schedule.tripType = "Cursă";
-        });
-
-        loadedSchedules = schedules;
-
-        showSchedules(schedules);
-        updateScheduleDashboard(schedules);
+        schedules = getList(data, "listTrainSchedule");
+        setMessage("search-message", "", false);
     } catch (error) {
-        showEmptyRow("schedules-table", "Nu s-au putut încărca datele.", 6);
-    }
-}
-
-async function searchSchedules() {
-    if (!validateSearchFields()) {
-        return;
+        schedules = [];
+        setMessage("search-message", error.message, true);
     }
 
-    const departureStationId = document.getElementById("search-departure").value;
-    const arrivalStationId = document.getElementById("search-arrival").value;
-    const date = document.getElementById("search-date").value;
-    const returnDate = document.getElementById("return-date").value;
-    const roundTrip = document.getElementById("round-trip").checked;
-
-    try {
-        showEmptyRow("schedules-table", "Se caută cursele...", 6);
-
-        const firstUrl = "/train-schedules/search?departureStationId=" + departureStationId + "&arrivalStationId=" + arrivalStationId + "&date=" + date;
-        const firstData = await apiGet(firstUrl);
-        const firstSchedules = getSchedulesArray(firstData);
-
-        firstSchedules.forEach(schedule => {
-            schedule.tripType = "Dus";
-        });
-
-        let allSchedules = firstSchedules;
-
-        if (roundTrip) {
-            const secondUrl = "/train-schedules/search?departureStationId=" + arrivalStationId + "&arrivalStationId=" + departureStationId + "&date=" + returnDate;
-            const secondData = await apiGet(secondUrl);
-            const secondSchedules = getSchedulesArray(secondData);
-
-            secondSchedules.forEach(schedule => {
-                schedule.tripType = "Întors";
-            });
-
-            allSchedules = firstSchedules.concat(secondSchedules);
-        }
-
-        loadedSchedules = allSchedules;
-        showSchedules(allSchedules);
-    } catch (error) {
-        showEmptyRow("schedules-table", "Nu s-au găsit curse pentru această căutare.", 6);
-    }
-}
-
-function showSchedules(schedules) {
-    const table = document.getElementById("schedules-table");
-    table.innerHTML = "";
-
-    if (!schedules || schedules.length === 0) {
-        showEmptyRow("schedules-table", "Nu există curse disponibile.", 6);
-        return;
-    }
-
-    schedules.forEach(schedule => {
-        const id = getScheduleId(schedule);
-        const departureName = getStationName(getScheduleDeparture(schedule));
-        const arrivalName = getStationName(getScheduleArrival(schedule));
-
-        const row = document.createElement("tr");
-
-        row.innerHTML = `
-            <td>${getTripBadge(schedule.tripType)}</td>
-            <td>
-                <strong>${departureName} → ${arrivalName}</strong>
-                <br>
-                <span class="small-text">Cursa ${id}</span>
-            </td>
-            <td>${formatDate(getScheduleDepartureTime(schedule))}</td>
-            <td>${formatDate(getScheduleArrivalTime(schedule))}</td>
-            <td><strong>${getSchedulePrice(schedule)} lei</strong></td>
-            <td><button onclick="selectSchedule(${id})">Alege</button></td>
-        `;
-
-        table.appendChild(row);
-    });
-}
-
-async function selectSchedule(id) {
-    document.getElementById("ticket-schedule-id").value = id;
-    document.getElementById("ticket-message").innerText = "Ai ales cursa " + id + ". Alege numărul de locuri.";
-    document.getElementById("ticket-message").classList.remove("error");
-    await loadSeatsInfo();
-}
-
-async function loadSeatsInfo() {
-    const scheduleId = Number(document.getElementById("ticket-schedule-id").value);
-    const count = getSeatCount();
-
-    currentSeatsInfo = null;
-    document.getElementById("seat-selects").innerHTML = "";
-
-    if (!scheduleId) {
-        showSeatInfoMessage("Selectează mai întâi o cursă din tabel.");
-        return;
-    }
-
-    try {
-        showSeatInfoMessage("Se încarcă locurile disponibile...");
-        const data = await apiGet("/tickets/available-seats/" + scheduleId + "?numberOfSeats=" + count);
-        currentSeatsInfo = data;
-        renderSeatInputs();
-    } catch (error) {
-        showSeatInfoMessage("Nu s-au putut încărca locurile disponibile.");
-    }
-}
-
-function renderSeatInputs() {
-    const count = getSeatCount();
-    const availableSeats = getAvailableSeats();
-    const occupiedSeats = getOccupiedSeats();
-    const totalSeats = getValue(currentSeatsInfo, "totalSeats");
-    const box = document.getElementById("seat-selects");
-
-    document.getElementById("seat-info-box").innerHTML = `
-        <p><strong>Locuri totale:</strong> ${totalSeats} · <strong>Libere:</strong> ${availableSeats.length} · <strong>Ocupate:</strong> ${occupiedSeats.length}</p>
-    `;
-
-    box.innerHTML = "";
-
-    for (let i = 0; i < count; i++) {
-        const div = document.createElement("div");
-        div.className = "seat-field";
-
-        div.innerHTML = `
-            <label for="seat-select-${i}">Locul ${i + 1}</label>
-            <select id="seat-select-${i}" class="seat-select" onchange="refreshSeatDropdowns()">
-                ${getSeatOptions(i)}
-            </select>
-        `;
-
-        box.appendChild(div);
-    }
-
-    refreshSeatDropdowns();
-}
-
-function refreshSeatDropdowns() {
-    const selects = document.querySelectorAll(".seat-select");
-
-    selects.forEach((select, index) => {
-        const currentValue = select.value;
-        select.innerHTML = getSeatOptions(index);
-
-        if (currentValue) {
-            select.value = currentValue;
-        }
-    });
-}
-
-function getSeatOptions(index) {
-    const availableSeats = getAvailableSeats();
-    const selectedSeats = getSelectedSeats();
-    const currentSelect = document.getElementById("seat-select-" + index);
-    const currentValue = currentSelect ? Number(currentSelect.value) : 0;
-
-    let html = `<option value="">Alege locul</option>`;
-
-    availableSeats.forEach(seat => {
-        const isUsed = selectedSeats.includes(seat) && seat !== currentValue;
-
-        if (!isUsed) {
-            html += `<option value="${seat}">Loc ${seat}</option>`;
-        }
-    });
-
-    return html;
-}
-
-function getSelectedSeats() {
-    const selects = document.querySelectorAll(".seat-select");
-    const seats = [];
-
-    selects.forEach(select => {
-        const value = Number(select.value);
-
-        if (value) {
-            seats.push(value);
-        }
-    });
-
-    return seats;
-}
-
-function getAvailableSeats() {
-    if (!currentSeatsInfo) {
-        return [];
-    }
-
-    return getValue(currentSeatsInfo, "availableSeats") || [];
-}
-
-function getOccupiedSeats() {
-    if (!currentSeatsInfo) {
-        return [];
-    }
-
-    return getValue(currentSeatsInfo, "occupiedSeats") || [];
-}
-
-function getSeatCount() {
-    const input = document.getElementById("ticket-seat-count");
-    let value = Number(input.value);
-
-    if (!value || value < 1) {
-        value = 1;
-        input.value = 1;
-    }
-
-    return value;
-}
-
-function showSeatInfoMessage(message) {
-    document.getElementById("seat-info-box").innerHTML = "<p>" + message + "</p>";
-    document.getElementById("seat-selects").innerHTML = "";
-}
-
-async function buyTickets() {
-    const trainScheduleId = Number(document.getElementById("ticket-schedule-id").value);
-    const count = getSeatCount();
-    const selectedSeats = getSelectedSeats();
-    const message = document.getElementById("ticket-message");
-
-    message.innerText = "";
-    message.classList.remove("error");
-
-    if (!trainScheduleId) {
-        message.innerText = "Alege o cursă din tabel.";
-        message.classList.add("error");
-        return;
-    }
-
-    if (selectedSeats.length !== count) {
-        message.innerText = "Selectează toate locurile.";
-        message.classList.add("error");
-        return;
-    }
-
-    try {
-        const response = await apiPost("/tickets/buyTickets", {
-            trainScheduleId: trainScheduleId,
-            seatNumbers: selectedSeats
-        });
-
-        const tickets = getTicketsArray(response);
-
-        lastBoughtTickets = tickets;
-        message.classList.remove("error");
-        message.innerText = "Bilet cumpărat cu succes.";
-
-        showTicketCard(tickets);
-        await loadSeatsInfo();
-        await loadMyTickets();
-    } catch (error) {
-        message.classList.add("error");
-        message.innerText = error.message;
-    }
+    renderSchedules();
+    renderAdminSchedules();
+    updateDashboard();
 }
 
 async function loadMyTickets() {
     try {
-        showEmptyRow("my-tickets-table", "Se încarcă biletele...", 8);
-
         const data = await apiGet("/tickets/my-tickets");
-        loadedTickets = getTicketsArray(data);
-        showMyTickets(loadedTickets);
-    } catch (error) {
-        loadedTickets = [];
-        showEmptyRow("my-tickets-table", "Nu ai bilete cumpărate.", 8);
+        myTickets = getList(data, "ticketList");
+    } catch {
+        myTickets = [];
     }
+
+    renderMyTickets();
 }
 
 async function loadAllTickets() {
     try {
-        showEmptyRow("all-tickets-table", "Se încarcă biletele...", 5);
-
         const data = await apiGet("/tickets/allTickets");
-        const tickets = getTicketsArray(data);
-        showAllTickets(tickets);
-        updateTicketDashboard(data);
+        allTickets = getList(data, "ticketList");
+    } catch {
+        allTickets = [];
+    }
+
+    renderAllTickets();
+    updateDashboard();
+}
+
+async function loadCustomers() {
+    try {
+        const data = await apiGet("/customers/allCustomers");
+        customers = getList(data, "customerList");
+    } catch {
+        customers = [];
+    }
+
+    renderCustomers();
+    updateDashboard();
+}
+
+async function searchSchedules() {
+    const departureId = inputValue("search-departure");
+    const arrivalId = inputValue("search-arrival");
+    const date = inputValue("search-date");
+
+    if (!departureId || !arrivalId || !date) {
+        setMessage("search-message", "Alege plecarea, sosirea și data.", true);
+        return;
+    }
+
+    if (departureId === arrivalId) {
+        setMessage("search-message", "Stația de plecare trebuie să fie diferită de stația de sosire.", true);
+        return;
+    }
+
+    try {
+        const url = "/train-schedules/search?departureStationId=" + departureId + "&arrivalStationId=" + arrivalId + "&date=" + date;
+        const data = await apiGet(url);
+
+        schedules = getList(data, "listTrainSchedule");
+
+        renderSchedules();
+        renderAdminSchedules();
+
+        if (schedules.length === 0) {
+            setMessage("search-message", "Nu există curse pentru căutarea aleasă.", true);
+        } else {
+            setMessage("search-message", "Curse găsite: " + schedules.length, false);
+        }
     } catch (error) {
-        showEmptyRow("all-tickets-table", "Nu există bilete.", 5);
+        schedules = [];
+        renderSchedules();
+        renderAdminSchedules();
+        setMessage("search-message", error.message, true);
+    }
+}
+
+async function buyTicket() {
+    const scheduleId = inputValue("ticket-schedule-id");
+    const seatNumber = inputValue("ticket-seat");
+
+    if (!scheduleId || !seatNumber) {
+        setMessage("ticket-message", "Completează ID-ul cursei și numărul locului.", true);
+        return;
+    }
+
+    const body = {
+        trainScheduleId: Number(scheduleId),
+        seatNumber: Number(seatNumber),
+        purchaseDate: new Date().toISOString(),
+        status: "Active"
+    };
+
+    try {
+        const data = await apiPost("/tickets/buyTicket", body);
+
+        setMessage("ticket-message", "Biletul a fost cumpărat.", false);
+        showTicketCard(data, body);
+        await loadMyTickets();
+    } catch (error) {
+        setMessage("ticket-message", error.message, true);
     }
 }
 
 async function cancelTicket(ticketId) {
+    const answer = confirm("Vrei să anulezi acest bilet?");
+
+    if (!answer) {
+        return;
+    }
+
     try {
-        await apiPut("/tickets/cancelTicket/" + ticketId);
-        alert("Bilet anulat.");
-        await loadSchedules();
+        await apiPut("/tickets/cancelTicket/" + ticketId, null);
         await loadMyTickets();
-        await loadSeatsInfo();
     } catch (error) {
         alert(error.message);
     }
 }
 
-function showMyTickets(tickets) {
+async function createTrain() {
+    const name = inputValue("train-name");
+    const trainNumber = inputValue("train-number");
+    const totalSeats = inputValue("train-seats");
+
+    if (!name || !trainNumber || !totalSeats) {
+        setMessage("train-message", "Completează toate câmpurile.", true);
+        return;
+    }
+
+    const body = {
+        name: name,
+        trainNumber: trainNumber,
+        totalSeats: Number(totalSeats)
+    };
+
+    try {
+        await apiPost("/trains/create", body);
+
+        setMessage("train-message", "Trenul a fost adăugat.", false);
+        clearInputs(["train-name", "train-number", "train-seats"]);
+        await loadTrains();
+    } catch (error) {
+        setMessage("train-message", error.message, true);
+    }
+}
+
+async function createStation() {
+    const name = inputValue("station-name");
+    const city = inputValue("station-city");
+
+    if (!name || !city) {
+        setMessage("station-message", "Completează toate câmpurile.", true);
+        return;
+    }
+
+    const body = {
+        name: name,
+        city: city
+    };
+
+    try {
+        await apiPost("/admin/stations/createStation", body);
+
+        setMessage("station-message", "Stația a fost adăugată.", false);
+        clearInputs(["station-name", "station-city"]);
+        await loadStations();
+    } catch (error) {
+        setMessage("station-message", error.message, true);
+    }
+}
+
+async function createSchedule() {
+    const trainId = inputValue("schedule-train");
+    const departureStationId = inputValue("schedule-departure");
+    const arrivalStationId = inputValue("schedule-arrival");
+    const departureTime = inputValue("schedule-departure-time");
+    const arrivalTime = inputValue("schedule-arrival-time");
+    const price = inputValue("schedule-price");
+
+    if (!trainId || !departureStationId || !arrivalStationId || !departureTime || !arrivalTime || !price) {
+        setMessage("schedule-message", "Completează toate câmpurile.", true);
+        return;
+    }
+
+    if (departureStationId === arrivalStationId) {
+        setMessage("schedule-message", "Stația de plecare trebuie să fie diferită de stația de sosire.", true);
+        return;
+    }
+
+    const body = {
+        trainId: Number(trainId),
+        departureStationId: Number(departureStationId),
+        arrivalStationId: Number(arrivalStationId),
+        departureTime: departureTime,
+        arrivalTime: arrivalTime,
+        price: Number(price)
+    };
+
+    try {
+        await apiPost("/train-schedules/create", body);
+
+        setMessage("schedule-message", "Cursa a fost adăugată.", false);
+        clearInputs(["schedule-departure-time", "schedule-arrival-time", "schedule-price"]);
+        await loadSchedules();
+    } catch (error) {
+        setMessage("schedule-message", error.message, true);
+    }
+}
+
+async function deleteSchedule(scheduleId) {
+    const answer = confirm("Vrei să ștergi această cursă?");
+
+    if (!answer) {
+        return;
+    }
+
+    try {
+        await apiDelete("/train-schedules/delete/" + scheduleId);
+        await loadSchedules();
+    } catch (error) {
+        alert(error.message);
+    }
+}
+
+function renderSchedules() {
+    const table = document.getElementById("schedules-table");
+
+    if (!table) {
+        return;
+    }
+
+    table.innerHTML = "";
+
+    if (schedules.length === 0) {
+        emptyRow(table, 6, "Nu există curse de afișat.");
+        return;
+    }
+
+    schedules.forEach(function (schedule) {
+        const id = value(schedule, "id");
+        const departureId = value(schedule, "departureStationId");
+        const arrivalId = value(schedule, "arrivalStationId");
+        const departureTime = value(schedule, "departureTime");
+        const arrivalTime = value(schedule, "arrivalTime");
+        const price = value(schedule, "price");
+
+        const row = document.createElement("tr");
+
+        row.innerHTML =
+            "<td>" + id + "</td>" +
+            "<td>" + stationName(departureId) + " - " + stationName(arrivalId) + "</td>" +
+            "<td>" + formatDate(departureTime) + "</td>" +
+            "<td>" + formatDate(arrivalTime) + "</td>" +
+            "<td>" + formatPrice(price) + "</td>" +
+            "<td>" + scheduleActionButton(id) + "</td>";
+
+        table.appendChild(row);
+    });
+}
+
+function renderAdminSchedules() {
+    const table = document.getElementById("admin-schedules-table");
+
+    if (!table) {
+        return;
+    }
+
+    table.innerHTML = "";
+
+    if (schedules.length === 0) {
+        emptyRow(table, 7, "Nu există curse de afișat.");
+        return;
+    }
+
+    schedules.forEach(function (schedule) {
+        const id = value(schedule, "id");
+        const trainId = value(schedule, "trainId");
+        const departureId = value(schedule, "departureStationId");
+        const arrivalId = value(schedule, "arrivalStationId");
+        const departureTime = value(schedule, "departureTime");
+        const arrivalTime = value(schedule, "arrivalTime");
+        const price = value(schedule, "price");
+
+        const row = document.createElement("tr");
+
+        row.innerHTML =
+            "<td>" + id + "</td>" +
+            "<td>" + trainName(trainId) + "</td>" +
+            "<td>" + stationName(departureId) + " - " + stationName(arrivalId) + "</td>" +
+            "<td>" + formatDate(departureTime) + "</td>" +
+            "<td>" + formatDate(arrivalTime) + "</td>" +
+            "<td>" + formatPrice(price) + "</td>" +
+            "<td><button class='btn-small btn-danger' onclick='deleteSchedule(" + id + ")'>Șterge</button></td>";
+
+        table.appendChild(row);
+    });
+}
+
+function renderTrains() {
+    const table = document.getElementById("trains-table");
+
+    if (!table) {
+        return;
+    }
+
+    table.innerHTML = "";
+
+    if (trains.length === 0) {
+        emptyRow(table, 4, "Nu există trenuri.");
+        return;
+    }
+
+    trains.forEach(function (train) {
+        const row = document.createElement("tr");
+
+        row.innerHTML =
+            "<td>" + value(train, "id") + "</td>" +
+            "<td>" + value(train, "name") + "</td>" +
+            "<td>" + value(train, "trainNumber") + "</td>" +
+            "<td>" + value(train, "totalSeats") + "</td>";
+
+        table.appendChild(row);
+    });
+}
+
+function renderStations() {
+    const table = document.getElementById("stations-table");
+
+    if (!table) {
+        return;
+    }
+
+    table.innerHTML = "";
+
+    if (stations.length === 0) {
+        emptyRow(table, 3, "Nu există stații.");
+        return;
+    }
+
+    stations.forEach(function (station) {
+        const row = document.createElement("tr");
+
+        row.innerHTML =
+            "<td>" + value(station, "id") + "</td>" +
+            "<td>" + value(station, "name") + "</td>" +
+            "<td>" + value(station, "city") + "</td>";
+
+        table.appendChild(row);
+    });
+}
+
+function renderMyTickets() {
     const table = document.getElementById("my-tickets-table");
-    table.innerHTML = "";
 
-    if (!tickets || tickets.length === 0) {
-        showEmptyRow("my-tickets-table", "Nu ai bilete cumpărate.", 8);
+    if (!table) {
         return;
     }
 
-    tickets.forEach(ticket => {
-        const details = getTicketDetails(ticket);
-        const id = getTicketId(ticket);
+    table.innerHTML = "";
+
+    if (myTickets.length === 0) {
+        emptyRow(table, 6, "Nu ai bilete cumpărate.");
+        return;
+    }
+
+    myTickets.forEach(function (ticket) {
+        const id = value(ticket, "id");
+        const scheduleId = value(ticket, "trainScheduleId");
+        const seatNumber = value(ticket, "seatNumber");
+        const purchaseDate = value(ticket, "purchaseDate");
+        const status = statusText(value(ticket, "status"));
+
+        const action = status === "Activ"
+            ? "<button class='btn-small btn-danger' onclick='cancelTicket(" + id + ")'>Anulează</button>"
+            : "-";
 
         const row = document.createElement("tr");
 
-        row.innerHTML = `
-            <td><strong>Bilet ${id}</strong><br><span class="small-text">Cursa ${details.scheduleId}</span></td>
-            <td>${details.route}</td>
-            <td>${details.departureTime}</td>
-            <td>${details.arrivalTime}</td>
-            <td>Loc ${details.seatNumber}</td>
-            <td>${details.price}</td>
-            <td>${getStatusLabel(details.status)}</td>
-            <td>
-                <div class="action-buttons">
-                    <button onclick="printTicketById(${id})">Printează</button>
-                    <button class="btn-dark" onclick="printTicketById(${id})">Salvează PDF</button>
-                    ${getTicketAction(ticket)}
-                </div>
-            </td>
-        `;
+        row.innerHTML =
+            "<td>" + id + "</td>" +
+            "<td>" + scheduleRoute(scheduleId) + "</td>" +
+            "<td>" + seatNumber + "</td>" +
+            "<td>" + formatDate(purchaseDate) + "</td>" +
+            "<td>" + statusBadge(status) + "</td>" +
+            "<td>" + action + "</td>";
 
         table.appendChild(row);
     });
 }
 
-function showAllTickets(tickets) {
+function renderAllTickets() {
     const table = document.getElementById("all-tickets-table");
-    table.innerHTML = "";
 
-    if (!tickets || tickets.length === 0) {
-        showEmptyRow("all-tickets-table", "Nu există bilete.", 5);
+    if (!table) {
         return;
     }
 
-    tickets.forEach(ticket => {
+    table.innerHTML = "";
+
+    if (allTickets.length === 0) {
+        emptyRow(table, 6, "Nu există bilete.");
+        return;
+    }
+
+    allTickets.forEach(function (ticket) {
+        const status = statusText(value(ticket, "status"));
+        const customer = value(ticket, "customerEmail") || value(ticket, "customerId") || "-";
+        const scheduleId = value(ticket, "trainScheduleId");
+
         const row = document.createElement("tr");
 
-        row.innerHTML = `
-            <td><strong>Bilet ${getTicketId(ticket)}</strong></td>
-            <td>Client ${getCustomerId(ticket)}</td>
-            <td>Cursa ${getTrainScheduleId(ticket)}</td>
-            <td>Loc ${getSeatNumber(ticket)}</td>
-            <td>${getStatusLabel(getTicketStatus(ticket))}</td>
-        `;
+        row.innerHTML =
+            "<td>" + value(ticket, "id") + "</td>" +
+            "<td>" + customer + "</td>" +
+            "<td>" + scheduleRoute(scheduleId) + "</td>" +
+            "<td>" + value(ticket, "seatNumber") + "</td>" +
+            "<td>" + formatDate(value(ticket, "purchaseDate")) + "</td>" +
+            "<td>" + statusBadge(status) + "</td>";
 
         table.appendChild(row);
     });
 }
 
-function getTicketAction(ticket) {
-    if (getTicketStatus(ticket) === "Cancelled") {
+function renderCustomers() {
+    const table = document.getElementById("customers-table");
+
+    if (!table) {
+        return;
+    }
+
+    table.innerHTML = "";
+
+    if (customers.length === 0) {
+        emptyRow(table, 3, "Nu există clienți.");
+        return;
+    }
+
+    customers.forEach(function (customer) {
+        const firstName = value(customer, "firstName");
+        const lastName = value(customer, "lastName");
+
+        const row = document.createElement("tr");
+
+        row.innerHTML =
+            "<td>" + value(customer, "id") + "</td>" +
+            "<td>" + firstName + " " + lastName + "</td>" +
+            "<td>" + value(customer, "email") + "</td>";
+
+        table.appendChild(row);
+    });
+}
+
+function scheduleActionButton(id) {
+    if (!isCustomer()) {
+        return "-";
+    }
+
+    return "<button class='btn-small' onclick='selectSchedule(" + id + ")'>Alege</button>";
+}
+
+function selectSchedule(scheduleId) {
+    setInput("ticket-schedule-id", scheduleId);
+
+    const seatInput = document.getElementById("ticket-seat");
+
+    if (seatInput) {
+        seatInput.focus();
+    }
+}
+
+function showTicketCard(data, request) {
+    const card = document.getElementById("ticket-card");
+
+    if (!card) {
+        return;
+    }
+
+    const ticket = data && data.ticket ? data.ticket : data || {};
+    const ticketId = value(ticket, "id") || "-";
+    const scheduleId = value(ticket, "trainScheduleId") || request.trainScheduleId;
+    const seatNumber = value(ticket, "seatNumber") || request.seatNumber;
+    const purchaseDate = value(ticket, "purchaseDate") || request.purchaseDate;
+    const status = statusText(value(ticket, "status") || request.status);
+
+    setText("ticket-code", ticketId);
+    setText("ticket-route", scheduleRoute(scheduleId));
+    setText("ticket-date", formatDate(purchaseDate));
+    setText("ticket-seat-view", seatNumber);
+    setText("ticket-status", status);
+
+    card.classList.remove("hidden");
+}
+
+function fillStationSelect(id) {
+    const select = document.getElementById(id);
+
+    if (!select) {
+        return;
+    }
+
+    select.innerHTML = "<option value=''>Alege stația</option>";
+
+    stations.forEach(function (station) {
+        const option = document.createElement("option");
+
+        option.value = value(station, "id");
+        option.innerText = stationName(option.value);
+
+        select.appendChild(option);
+    });
+}
+
+function fillTrainSelect() {
+    const select = document.getElementById("schedule-train");
+
+    if (!select) {
+        return;
+    }
+
+    select.innerHTML = "<option value=''>Alege trenul</option>";
+
+    trains.forEach(function (train) {
+        const option = document.createElement("option");
+
+        option.value = value(train, "id");
+        option.innerText = trainName(option.value);
+
+        select.appendChild(option);
+    });
+}
+
+function updateDashboard() {
+    setText("total-schedules", schedules.length);
+    setText("total-tickets", allTickets.length);
+    setText("total-trains", trains.length);
+    setText("total-stations", stations.length);
+    setText("total-customers", customers.length);
+
+    const active = allTickets.filter(function (ticket) {
+        return statusText(value(ticket, "status")) === "Activ";
+    }).length;
+
+    const cancelled = allTickets.filter(function (ticket) {
+        return statusText(value(ticket, "status")) === "Anulat";
+    }).length;
+
+    setText("active-tickets", active);
+    setText("cancelled-tickets", cancelled);
+}
+
+function stationName(id) {
+    const station = stations.find(function (item) {
+        return Number(value(item, "id")) === Number(id);
+    });
+
+    if (!station) {
+        return "Stația " + id;
+    }
+
+    const name = value(station, "name");
+    const city = value(station, "city");
+
+    if (city) {
+        return name + " - " + city;
+    }
+
+    return name;
+}
+
+function trainName(id) {
+    const train = trains.find(function (item) {
+        return Number(value(item, "id")) === Number(id);
+    });
+
+    if (!train) {
+        return "Tren " + id;
+    }
+
+    const name = value(train, "name");
+    const number = value(train, "trainNumber");
+
+    if (number) {
+        return name + " (" + number + ")";
+    }
+
+    return name;
+}
+
+function scheduleRoute(scheduleId) {
+    const schedule = schedules.find(function (item) {
+        return Number(value(item, "id")) === Number(scheduleId);
+    });
+
+    if (!schedule) {
+        return "Cursa " + scheduleId;
+    }
+
+    const departureId = value(schedule, "departureStationId");
+    const arrivalId = value(schedule, "arrivalStationId");
+
+    return stationName(departureId) + " - " + stationName(arrivalId);
+}
+
+function statusText(status) {
+    const text = String(status || "").toLowerCase();
+
+    if (text.includes("cancel") || text.includes("anulat")) {
+        return "Anulat";
+    }
+
+    if (text.includes("active") || text.includes("activ")) {
+        return "Activ";
+    }
+
+    return status || "-";
+}
+
+function statusBadge(status) {
+    if (status === "Activ") {
+        return "<span class='badge badge-green'>Activ</span>";
+    }
+
+    if (status === "Anulat") {
+        return "<span class='badge badge-red'>Anulat</span>";
+    }
+
+    return "<span class='badge badge-blue'>" + status + "</span>";
+}
+
+function getList(data, propertyName) {
+    if (!data) {
+        return [];
+    }
+
+    if (Array.isArray(data)) {
+        return data;
+    }
+
+    if (Array.isArray(data[propertyName])) {
+        return data[propertyName];
+    }
+
+    for (const key in data) {
+        if (Array.isArray(data[key])) {
+            return data[key];
+        }
+    }
+
+    return [];
+}
+
+function value(object, key) {
+    if (!object) {
         return "";
     }
 
-    return `<button class="btn-danger" onclick="cancelTicket(${getTicketId(ticket)})">Anulează</button>`;
-}
-
-function updateScheduleDashboard(schedules) {
-    const totalSchedules = document.getElementById("total-schedules");
-
-    if (totalSchedules) {
-        totalSchedules.innerText = schedules.length;
-    }
-}
-
-function updateTicketDashboard(data) {
-    const tickets = getTicketsArray(data);
-    const totalTickets = tickets.length;
-    const activeTickets = tickets.filter(ticket => getTicketStatus(ticket) !== "Cancelled").length;
-    const cancelledTickets = tickets.filter(ticket => getTicketStatus(ticket) === "Cancelled").length;
-
-    document.getElementById("total-tickets").innerText = totalTickets;
-    document.getElementById("active-tickets").innerText = activeTickets;
-    document.getElementById("cancelled-tickets").innerText = cancelledTickets;
-}
-
-function showTicketCard(tickets) {
-    if (!tickets || tickets.length === 0) {
-        return;
-    }
-
-    const firstTicket = tickets[0];
-    const details = getTicketDetails(firstTicket);
-    const ids = tickets.map(ticket => "TP-" + getTicketId(ticket)).join(", ");
-    const seats = tickets.map(ticket => getSeatNumber(ticket)).join(", ");
-    const total = getTotalPrice(tickets);
-
-    document.getElementById("ticket-code").innerText = ids;
-    document.getElementById("ticket-route").innerText = details.route;
-    document.getElementById("ticket-schedule").innerText = details.scheduleId;
-    document.getElementById("ticket-seat").innerText = seats;
-    document.getElementById("ticket-total").innerText = total;
-    document.getElementById("ticket-status").innerText = "Activ";
-
-    document.getElementById("ticket-card").classList.remove("hidden");
-}
-
-function printTicketById(ticketId) {
-    const ticket = loadedTickets.find(item => getTicketId(item) === ticketId);
-
-    if (!ticket) {
-        alert("Biletul nu a fost găsit.");
-        return;
-    }
-
-    printTickets([ticket]);
-}
-
-function printTickets(tickets) {
-    if (!tickets || tickets.length === 0) {
-        return;
-    }
-
-    const printWindow = window.open("", "_blank");
-
-    if (!printWindow) {
-        alert("Browserul a blocat fereastra de printare.");
-        return;
-    }
-
-    printWindow.document.open();
-    printWindow.document.write(getPrintHtml(tickets));
-    printWindow.document.close();
-
-    printWindow.onload = function () {
-        printWindow.focus();
-        printWindow.print();
-    };
-}
-
-function getPrintHtml(tickets) {
-    let ticketHtml = "";
-
-    tickets.forEach(ticket => {
-        const details = getTicketDetails(ticket);
-
-        ticketHtml += `
-            <div class="ticket">
-                <div class="ticket-header">
-                    <div>
-                        <h1>TrainPass</h1>
-                        <p>Bilet de tren</p>
-                    </div>
-                    <strong>TP-${getTicketId(ticket)}</strong>
-                </div>
-
-                <div class="ticket-row">
-                    <span>Rută</span>
-                    <strong>${details.route}</strong>
-                </div>
-
-                <div class="ticket-row">
-                    <span>Plecare</span>
-                    <strong>${details.departureTime}</strong>
-                </div>
-
-                <div class="ticket-row">
-                    <span>Sosire</span>
-                    <strong>${details.arrivalTime}</strong>
-                </div>
-
-                <div class="ticket-grid">
-                    <div>
-                        <span>Cursă</span>
-                        <strong>${details.scheduleId}</strong>
-                    </div>
-                    <div>
-                        <span>Loc</span>
-                        <strong>${details.seatNumber}</strong>
-                    </div>
-                    <div>
-                        <span>Preț</span>
-                        <strong>${details.price}</strong>
-                    </div>
-                    <div>
-                        <span>Stare</span>
-                        <strong>${details.statusText}</strong>
-                    </div>
-                </div>
-            </div>
-        `;
-    });
-
-    return `
-        <!DOCTYPE html>
-        <html lang="ro">
-        <head>
-            <meta charset="UTF-8">
-            <title>Bilet TrainPass</title>
-            <style>
-                @page {
-                    size: A4;
-                    margin: 16mm;
-                }
-
-                body {
-                    font-family: Arial, sans-serif;
-                    margin: 0;
-                    color: #0f172a;
-                    background: white;
-                }
-
-                .ticket {
-                    border: 2px solid #1d4ed8;
-                    border-radius: 18px;
-                    padding: 24px;
-                    margin-bottom: 20px;
-                    page-break-inside: avoid;
-                }
-
-                .ticket-header {
-                    background: #1d4ed8;
-                    color: white;
-                    padding: 18px;
-                    border-radius: 14px;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    margin-bottom: 22px;
-                }
-
-                .ticket-header h1 {
-                    margin: 0 0 4px 0;
-                }
-
-                .ticket-header p {
-                    margin: 0;
-                }
-
-                .ticket-row {
-                    border-bottom: 1px solid #e2e8f0;
-                    padding: 12px 0;
-                    display: flex;
-                    justify-content: space-between;
-                    gap: 20px;
-                }
-
-                .ticket-grid {
-                    display: grid;
-                    grid-template-columns: repeat(4, 1fr);
-                    gap: 12px;
-                    margin-top: 18px;
-                }
-
-                .ticket-grid div {
-                    border: 1px solid #e2e8f0;
-                    border-radius: 12px;
-                    padding: 14px;
-                }
-
-                span {
-                    display: block;
-                    color: #64748b;
-                    font-size: 13px;
-                    margin-bottom: 6px;
-                }
-
-                strong {
-                    font-size: 16px;
-                }
-            </style>
-        </head>
-        <body>
-            ${ticketHtml}
-        </body>
-        </html>
-    `;
-}
-
-function getTicketDetails(ticket) {
-    const scheduleId = getTrainScheduleId(ticket);
-    const schedule = loadedSchedules.find(item => getScheduleId(item) === scheduleId);
-    const seatNumber = getSeatNumber(ticket);
-    const status = getTicketStatus(ticket);
-
-    if (!schedule) {
-        return {
-            scheduleId: scheduleId,
-            route: "Cursa " + scheduleId,
-            departureTime: "-",
-            arrivalTime: "-",
-            seatNumber: seatNumber,
-            price: "-",
-            status: status,
-            statusText: getStatusText(status)
-        };
-    }
-
-    return {
-        scheduleId: scheduleId,
-        route: getStationName(getScheduleDeparture(schedule)) + " → " + getStationName(getScheduleArrival(schedule)),
-        departureTime: formatDate(getScheduleDepartureTime(schedule)),
-        arrivalTime: formatDate(getScheduleArrivalTime(schedule)),
-        seatNumber: seatNumber,
-        price: getSchedulePrice(schedule) + " lei",
-        status: status,
-        statusText: getStatusText(status)
-    };
-}
-
-function getTotalPrice(tickets) {
-    if (!tickets || tickets.length === 0) {
-        return "-";
-    }
-
-    const firstTicket = tickets[0];
-    const scheduleId = getTrainScheduleId(firstTicket);
-    const schedule = loadedSchedules.find(item => getScheduleId(item) === scheduleId);
-
-    if (!schedule) {
-        return "-";
-    }
-
-    return Number(getSchedulePrice(schedule)) * tickets.length + " lei";
-}
-
-function showEmptyRow(tableId, message, columns) {
-    const table = document.getElementById(tableId);
-
-    table.innerHTML = `
-        <tr>
-            <td colspan="${columns}" class="empty-message">${message}</td>
-        </tr>
-    `;
-}
-
-function getSchedulesArray(data) {
-    if (!data) {
-        return [];
-    }
-
-    return data.listTrainSchedule || data.ListTrainSchedule || data || [];
-}
-
-function getTicketsArray(data) {
-    if (!data) {
-        return [];
-    }
-
-    return data.ticketList || data.TicketList || data || [];
-}
-
-function getValue(object, key) {
-    if (!object) {
-        return null;
+    if (object[key] !== undefined && object[key] !== null) {
+        return object[key];
     }
 
     const pascalKey = key.charAt(0).toUpperCase() + key.slice(1);
 
-    return object[key] ?? object[pascalKey];
-}
-
-function getScheduleId(schedule) {
-    return getValue(schedule, "id");
-}
-
-function getScheduleDeparture(schedule) {
-    return getValue(schedule, "departureStationId");
-}
-
-function getScheduleArrival(schedule) {
-    return getValue(schedule, "arrivalStationId");
-}
-
-function getScheduleDepartureTime(schedule) {
-    return getValue(schedule, "departureTime");
-}
-
-function getScheduleArrivalTime(schedule) {
-    return getValue(schedule, "arrivalTime");
-}
-
-function getSchedulePrice(schedule) {
-    return getValue(schedule, "price");
-}
-
-function getTicketId(ticket) {
-    return getValue(ticket, "id");
-}
-
-function getCustomerId(ticket) {
-    return getValue(ticket, "customerId");
-}
-
-function getTrainScheduleId(ticket) {
-    return getValue(ticket, "trainScheduleId");
-}
-
-function getSeatNumber(ticket) {
-    return getValue(ticket, "seatNumber");
-}
-
-function getTicketStatus(ticket) {
-    return getValue(ticket, "status");
-}
-
-function getStationName(id) {
-    return stationNames[id] || "Stația " + id;
-}
-
-function getTripBadge(type) {
-    if (type === "Dus") {
-        return `<span class="badge badge-blue">Dus</span>`;
+    if (object[pascalKey] !== undefined && object[pascalKey] !== null) {
+        return object[pascalKey];
     }
 
-    if (type === "Întors") {
-        return `<span class="badge badge-green">Întors</span>`;
-    }
-
-    return `<span class="badge badge-blue">Cursă</span>`;
+    return "";
 }
 
-function getStatusLabel(status) {
-    if (status === "Cancelled") {
-        return `<span class="badge badge-red">Anulat</span>`;
+function inputValue(id) {
+    const element = document.getElementById(id);
+
+    if (!element) {
+        return "";
     }
 
-    return `<span class="badge badge-green">Activ</span>`;
+    return element.value.trim();
 }
 
-function getStatusText(status) {
-    if (status === "Cancelled") {
-        return "Anulat";
+function setInput(id, valueToSet) {
+    const element = document.getElementById(id);
+
+    if (element) {
+        element.value = valueToSet;
+    }
+}
+
+function setText(id, valueToSet) {
+    const element = document.getElementById(id);
+
+    if (element) {
+        element.innerText = valueToSet || "";
+    }
+}
+
+function setMessage(id, text, isError) {
+    const element = document.getElementById(id);
+
+    if (!element) {
+        return;
     }
 
-    return "Activ";
+    element.innerText = text || "";
+    element.className = isError ? "message error" : "message success";
 }
 
-function formatDate(dateValue) {
-    if (!dateValue) {
+function click(id, action) {
+    const element = document.getElementById(id);
+
+    if (element) {
+        element.addEventListener("click", action);
+    }
+}
+
+function clearInputs(ids) {
+    ids.forEach(function (id) {
+        setInput(id, "");
+    });
+}
+
+function emptyRow(table, columns, text) {
+    const row = document.createElement("tr");
+
+    row.innerHTML = "<td colspan='" + columns + "' class='empty-row'>" + text + "</td>";
+    table.appendChild(row);
+}
+
+function formatDate(valueToFormat) {
+    if (!valueToFormat) {
         return "-";
     }
 
-    return new Date(dateValue).toLocaleString("ro-RO");
+    const date = new Date(valueToFormat);
+
+    if (isNaN(date.getTime())) {
+        return valueToFormat;
+    }
+
+    return date.toLocaleString("ro-RO", {
+        dateStyle: "short",
+        timeStyle: "short"
+    });
+}
+
+function formatPrice(price) {
+    if (price === undefined || price === null || price === "") {
+        return "-";
+    }
+
+    return price + " lei";
+}
+
+function isAdmin() {
+    return String(getRole()).toLowerCase() === "admin";
+}
+
+function isCustomer() {
+    return String(getRole()).toLowerCase() === "customer";
+}
+
+function getDefaultStations() {
+    return [
+        { id: 101, name: "București Nord", city: "București" },
+        { id: 102, name: "Ploiești Vest", city: "Ploiești" },
+        { id: 103, name: "Brașov", city: "Brașov" },
+        { id: 104, name: "Sinaia", city: "Sinaia" },
+        { id: 105, name: "Predeal", city: "Predeal" },
+        { id: 106, name: "Cluj-Napoca", city: "Cluj-Napoca" },
+        { id: 107, name: "Alba Iulia", city: "Alba Iulia" },
+        { id: 108, name: "Sibiu", city: "Sibiu" },
+        { id: 109, name: "Timișoara Nord", city: "Timișoara" },
+        { id: 110, name: "Arad", city: "Arad" },
+        { id: 111, name: "Iași", city: "Iași" },
+        { id: 112, name: "Suceava", city: "Suceava" },
+        { id: 113, name: "Constanța", city: "Constanța" },
+        { id: 114, name: "Craiova", city: "Craiova" },
+        { id: 115, name: "Pitești", city: "Pitești" }
+    ];
+}
+
+function printTicket() {
+    window.print();
+}
+
+function logout() {
+    removeAuthData();
+    window.location.href = "login.html";
 }

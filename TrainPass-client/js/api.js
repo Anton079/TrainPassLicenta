@@ -4,10 +4,6 @@ function getToken() {
     return localStorage.getItem("token");
 }
 
-function getUserId() {
-    return localStorage.getItem("userId");
-}
-
 function getRole() {
     return localStorage.getItem("role");
 }
@@ -16,11 +12,19 @@ function getEmail() {
     return localStorage.getItem("email");
 }
 
+function getUserId() {
+    return localStorage.getItem("userId");
+}
+
+function isLoggedIn() {
+    return getToken() !== null && getToken() !== "";
+}
+
 function saveAuthData(response) {
-    localStorage.setItem("token", response.token || response.Token);
-    localStorage.setItem("userId", response.id || response.Id);
-    localStorage.setItem("role", response.role || response.Role);
-    localStorage.setItem("email", response.email || response.Email);
+    localStorage.setItem("token", response.token);
+    localStorage.setItem("userId", response.id || response.userId || "");
+    localStorage.setItem("role", response.role || "");
+    localStorage.setItem("email", response.email || "");
 }
 
 function removeAuthData() {
@@ -30,14 +34,10 @@ function removeAuthData() {
     localStorage.removeItem("email");
 }
 
-function isLoggedIn() {
-    return getToken() !== null;
-}
-
-function getHeaders(hasBody) {
+async function apiRequest(url, method, body) {
     const headers = {};
 
-    if (hasBody) {
+    if (body !== null && body !== undefined) {
         headers["Content-Type"] = "application/json";
     }
 
@@ -45,121 +45,67 @@ function getHeaders(hasBody) {
         headers["Authorization"] = "Bearer " + getToken();
     }
 
-    return headers;
-}
+    const options = {
+        method: method,
+        headers: headers
+    };
 
-async function apiGet(url) {
-    const response = await fetch(API_URL + url, {
-        method: "GET",
-        headers: getHeaders(false)
-    });
+    if (body !== null && body !== undefined) {
+        options.body = JSON.stringify(body);
+    }
 
-    return readResponse(response);
-}
-
-async function apiPost(url, body) {
-    const response = await fetch(API_URL + url, {
-        method: "POST",
-        headers: getHeaders(true),
-        body: JSON.stringify(body)
-    });
-
-    return readResponse(response);
-}
-
-async function apiPut(url) {
-    const response = await fetch(API_URL + url, {
-        method: "PUT",
-        headers: getHeaders(false)
-    });
-
-    return readResponse(response);
-}
-
-async function readResponse(response) {
+    const response = await fetch(API_URL + url, options);
     const text = await response.text();
 
     if (!response.ok) {
-        throw new Error(getErrorMessage(text));
+        throw new Error(getErrorText(text));
     }
 
     if (text === "") {
         return null;
     }
 
-    return JSON.parse(text);
+    try {
+        return JSON.parse(text);
+    } catch {
+        return text;
+    }
 }
 
-function getErrorMessage(text) {
+function apiGet(url) {
+    return apiRequest(url, "GET", null);
+}
+
+function apiPost(url, body) {
+    return apiRequest(url, "POST", body);
+}
+
+function apiPut(url, body) {
+    return apiRequest(url, "PUT", body);
+}
+
+function apiDelete(url) {
+    return apiRequest(url, "DELETE", null);
+}
+
+function getErrorText(text) {
     if (!text) {
         return "A apărut o eroare.";
     }
 
     try {
-        const error = JSON.parse(text);
+        const data = JSON.parse(text);
 
-        if (error.errors) {
-            const messages = [];
-
-            Object.keys(error.errors).forEach(key => {
-                error.errors[key].forEach(message => {
-                    messages.push(translateField(key) + ": " + translateMessage(message));
-                });
-            });
-
-            return messages.join(" ");
+        if (data.message) {
+            return data.message;
         }
 
-        if (error.title) {
-            return translateMessage(error.title);
+        if (data.title) {
+            return data.title;
         }
 
-        if (error.message) {
-            return translateMessage(error.message);
-        }
+        return text;
     } catch {
-        return translateMessage(text);
+        return text;
     }
-
-    return "A apărut o eroare.";
-}
-
-function translateField(field) {
-    if (field === "CustomerId") {
-        return "Client";
-    }
-
-    if (field === "TrainScheduleId") {
-        return "Cursă";
-    }
-
-    if (field === "SeatNumber") {
-        return "Loc";
-    }
-
-    if (field === "SeatNumbers") {
-        return "Locuri";
-    }
-
-    if (field === "Status") {
-        return "Stare";
-    }
-
-    return field;
-}
-
-function translateMessage(message) {
-    if (message.includes("The CustomerId field is required")) {
-        return "Trebuie să intri din nou în cont.";
-    }
-
-    if (message.includes("The Status field is required")) {
-        return "Starea biletului lipsește.";
-    }
-
-    if (message.includes("One or more validation errors occurred")) {
-        return "Verifică datele introduse.";
-    }
-
-    return message;
 }

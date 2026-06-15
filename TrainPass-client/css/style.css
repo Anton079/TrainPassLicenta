@@ -2,11 +2,15 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f1f5f9;
-    color: #0f172a;
+    background: #f4f6f8;
+    color: #111827;
 }
 
 h1,
@@ -18,45 +22,73 @@ p {
 
 a {
     color: #2563eb;
-    font-weight: 700;
     text-decoration: none;
+    font-weight: 700;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #334155;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+input,
+select {
+    width: 100%;
+    height: 44px;
+    padding: 0 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background: white;
+    color: #111827;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
 }
 
 button {
+    min-height: 44px;
     border: none;
+    border-radius: 10px;
     background: #2563eb;
     color: white;
-    padding: 12px 18px;
-    border-radius: 10px;
+    padding: 0 18px;
+    font-size: 15px;
     font-weight: 700;
     cursor: pointer;
-    font-size: 15px;
 }
 
 button:hover {
     background: #1d4ed8;
 }
 
-button:disabled {
-    background: #94a3b8;
-    cursor: not-allowed;
-}
-
 .btn-dark {
-    background: #0f172a;
+    background: #111827;
 }
 
 .btn-dark:hover {
-    background: #020617;
+    background: #030712;
 }
 
 .btn-light {
     background: white;
-    color: #0f172a;
+    color: #2563eb;
+    border: 1px solid #bfdbfe;
 }
 
 .btn-light:hover {
-    background: #e2e8f0;
+    background: #eff6ff;
 }
 
 .btn-danger {
@@ -67,48 +99,20 @@ button:disabled {
     background: #b91c1c;
 }
 
-label {
-    display: block;
-    font-size: 14px;
-    font-weight: 700;
-    margin-bottom: 6px;
-    color: #334155;
-}
-
-input,
-select {
-    width: 100%;
-    padding: 12px 14px;
-    border-radius: 10px;
-    border: 1px solid #cbd5e1;
-    font-size: 15px;
-    background: white;
-}
-
-input:focus,
-select:focus {
-    outline: none;
-    border-color: #2563eb;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
-}
-
-input:disabled,
-input:read-only {
-    background: #f1f5f9;
-    color: #64748b;
-}
-
-.input-error {
-    border-color: #dc2626;
-    background: #fff7f7;
+.btn-small {
+    min-height: 34px;
+    padding: 0 12px;
+    font-size: 13px;
 }
 
 .message {
-    min-height: 22px;
-    margin: 12px 0;
-    font-weight: 700;
-    color: #166534;
-    word-break: break-word;
+    min-height: 20px;
+    margin: 12px 0 0;
+    font-size: 14px;
+}
+
+.success {
+    color: #15803d;
 }
 
 .error {
@@ -116,5 +120,47 @@ input:read-only {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 5px 10px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.badge-green {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.badge-red {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.badge-blue {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #ticket-card,
+    #ticket-card * {
+        visibility: visible;
+    }
+
+    #ticket-card {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        width: 420px;
+    }
 }
