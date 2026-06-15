@@ -37,5 +37,21 @@ namespace TrainPass.Tickets.Service
 
             return _mapper.Map<TicketResponse>(savedTicket);
         }
+
+        public async Task<TicketResponse> CancelTicket(int ticketId)
+        {
+            var ticket = await _repo.GetTicketById(ticketId);
+
+            if (ticket == null)
+            {
+                throw new TicketNotFoundException();
+            }
+
+            ticket.Status = "Cancelled";
+
+            var updatedTicket = await _repo.UpdateTicket(ticket);
+
+            return _mapper.Map<TicketResponse>(updatedTicket);
+        }
     }
 }

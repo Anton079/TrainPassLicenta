@@ -84,5 +84,17 @@ namespace TrainPass.Tickets.Repository
 
             return soldSeats < train.TotalSeats;
         }
+        public async Task<Ticket?> GetTicketById(int ticketId)
+        {
+            return await _db.Tickets
+                .FirstOrDefaultAsync(t => t.Id == ticketId);
+        }
+        public async Task<Ticket> UpdateTicket(Ticket ticket)
+        {
+            _db.Tickets.Update(ticket);
+            await _db.SaveChangesAsync();
+
+            return ticket;
+        }
     }
 }

@@ -82,5 +82,20 @@ namespace TrainPass.Tickets.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpPut("cancelTicket/{ticketId}")]
+        [Authorize(Roles = "Customer")]
+        public async Task<ActionResult<TicketResponse>> CancelTicket(int ticketId)
+        {
+            try
+            {
+                var response = await _command.CancelTicket(ticketId);
+                return Ok(response);
+            }
+            catch (TicketNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
     }
 }

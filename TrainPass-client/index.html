@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrainPass</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="page-header">
+    <div class="wrap">
+        <h1>TrainPass</h1>
+        <p>Aplicatie pentru bilete de tren</p>
+    </div>
+</header>
+
+<main class="wrap">
+
+    <section class="card">
+        <h2>Login</h2>
+
+        <div class="form-grid">
+            <div class="field">
+                <label>Email</label>
+                <input id="login-email" type="email" placeholder="email@example.com">
+            </div>
+
+            <div class="field">
+                <label>Password</label>
+                <input id="login-password" type="password" placeholder="password">
+            </div>
+        </div>
+
+        <button class="btn btn-primary" id="btn-login">Login</button>
+        <button class="btn btn-ghost" id="btn-logout">Logout</button>
+
+        <p id="login-message"></p>
+    </section>
+
+    <section class="card">
+        <div class="section-head">
+            <h2>Train schedules</h2>
+            <button class="btn btn-primary" id="btn-load-schedules">Load schedules</button>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Train Id</th>
+                    <th>Departure</th>
+                    <th>Arrival</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="schedules-list"></tbody>
+        </table>
+    </section>
+
+    <section class="card">
+        <h2>Locuri libere</h2>
+
+        <div class="form-grid">
+            <div class="field">
+                <label>TrainSchedule Id</label>
+                <input id="free-seats-schedule-id" type="number">
+            </div>
+        </div>
+
+        <button class="btn btn-primary" id="btn-free-seats">Vezi locuri libere</button>
+
+        <div id="free-seats-list" class="seats"></div>
+    </section>
+
+    <section class="card">
+        <h2>Cumpara bilet</h2>
+
+        <div class="form-grid">
+            <div class="field">
+                <label>Customer Id</label>
+                <input id="ticket-customer-id" type="number">
+            </div>
+
+            <div class="field">
+                <label>TrainSchedule Id</label>
+                <input id="ticket-schedule-id" type="number">
+            </div>
+
+            <div class="field">
+                <label>Seat Number</label>
+                <input id="ticket-seat-number" type="number">
+            </div>
+        </div>
+
+        <button class="btn btn-primary" id="btn-buy-ticket">Cumpara bilet</button>
+
+        <p id="ticket-message"></p>
+    </section>
+
+</main>
+
+<script src="js/api.js"></script>
+<script src="js/functions.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

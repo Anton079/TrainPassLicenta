@@ -11,5 +11,7 @@ namespace TrainPass.Tickets.Repository
         Task<bool> TrainScheduleExists(int trainScheduleId);
         Task<bool> SeatAlreadyTaken(int trainScheduleId, int seatNumber);
         Task<bool> HasAvailableSeats(int trainScheduleId);
+        Task<Ticket?> GetTicketById(int ticketId);
+        Task<Ticket> UpdateTicket(Ticket ticket);
     }
 }

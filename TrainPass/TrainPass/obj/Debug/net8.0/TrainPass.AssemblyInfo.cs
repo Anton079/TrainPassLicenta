@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TrainPass")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b58560dfd570c20137c57e6e1b080fd3a0dc1c26")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+420886dda2ae3a700bdf377b1c5fe08ad2bba142")]
 [assembly: System.Reflection.AssemblyProductAttribute("TrainPass")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TrainPass")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
