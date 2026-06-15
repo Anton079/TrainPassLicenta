@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+input,
+select,
+button {
+    font-family: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: 10px 16px;
+    border-radius: 6px;
+    background-color: #1e88e5;
+    color: white;
+    font-size: 15px;
+}
+
+.btn:hover {
+    background-color: #1565c0;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.success-message {
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+}
