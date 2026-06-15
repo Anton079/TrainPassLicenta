@@ -2,8 +2,16 @@ document.getElementById("btn-login-customer").addEventListener("click", loginCus
 document.getElementById("btn-login-admin").addEventListener("click", loginAdmin);
 
 async function loginCustomer() {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+    const message = document.getElementById("message");
+
+    message.innerText = "";
+
+    if (email === "" || password === "") {
+        message.innerText = "Completează emailul și parola.";
+        return;
+    }
 
     try {
         const response = await apiPost("/auth/login-customer", {
@@ -12,16 +20,23 @@ async function loginCustomer() {
         });
 
         saveAuthData(response);
-
         window.location.href = "index.html";
     } catch (error) {
-        document.getElementById("message").innerText = error.message;
+        message.innerText = getFriendlyError(error.message);
     }
 }
 
 async function loginAdmin() {
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+    const message = document.getElementById("message");
+
+    message.innerText = "";
+
+    if (email === "" || password === "") {
+        message.innerText = "Completează emailul și parola.";
+        return;
+    }
 
     try {
         const response = await apiPost("/auth/login-admin", {
@@ -30,9 +45,16 @@ async function loginAdmin() {
         });
 
         saveAuthData(response);
-
         window.location.href = "index.html";
     } catch (error) {
-        document.getElementById("message").innerText = error.message;
+        message.innerText = getFriendlyError(error.message);
     }
+}
+
+function getFriendlyError(text) {
+    if (!text) {
+        return "A apărut o eroare.";
+    }
+
+    return text;
 }

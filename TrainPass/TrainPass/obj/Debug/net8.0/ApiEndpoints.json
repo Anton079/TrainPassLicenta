@@ -119,6 +119,37 @@
   },
   {
     "ContainingType": "TrainPass.Tickets.Controllers.ControllerTicket",
+    "Method": "GetAvailableSeats",
+    "RelativePath": "api/v1/tickets/available-seats/{trainScheduleId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trainScheduleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "numberOfSeats",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TrainPass.Tickets.Dtos.SeatsInfoDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TrainPass.Tickets.Controllers.ControllerTicket",
     "Method": "BuyTicket",
     "RelativePath": "api/v1/tickets/buyTicket",
     "HttpMethod": "POST",
@@ -134,6 +165,32 @@
     "ReturnTypes": [
       {
         "Type": "TrainPass.Tickets.Dtos.TicketResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TrainPass.Tickets.Controllers.ControllerTicket",
+    "Method": "BuyTickets",
+    "RelativePath": "api/v1/tickets/buyTickets",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "TrainPass.Tickets.Dtos.BuyTicketsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TrainPass.Tickets.Dtos.GetAllTicketsDto",
         "MediaTypes": [
           "text/plain",
           "application/json",

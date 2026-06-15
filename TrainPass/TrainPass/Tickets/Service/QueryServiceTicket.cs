@@ -36,5 +36,17 @@ namespace TrainPass.Tickets.Service
 
             return tickets;
         }
+
+        public async Task<SeatsInfoDto> GetSeatsInfo(int trainScheduleId, int numberOfSeats)
+        {
+            var seatsInfo = await _repo.GetSeatsInfo(trainScheduleId, numberOfSeats);
+
+            if (seatsInfo == null)
+            {
+                throw new TrainScheduleNotFoundException();
+            }
+
+            return seatsInfo;
+        }
     }
 }

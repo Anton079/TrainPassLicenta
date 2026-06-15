@@ -17,10 +17,10 @@ function getEmail() {
 }
 
 function saveAuthData(response) {
-    localStorage.setItem("token", response.token);
-    localStorage.setItem("userId", response.id);
-    localStorage.setItem("role", response.role);
-    localStorage.setItem("email", response.email);
+    localStorage.setItem("token", response.token || response.Token);
+    localStorage.setItem("userId", response.id || response.Id);
+    localStorage.setItem("role", response.role || response.Role);
+    localStorage.setItem("email", response.email || response.Email);
 }
 
 function removeAuthData() {
@@ -34,41 +34,53 @@ function isLoggedIn() {
     return getToken() !== null;
 }
 
+function getHeaders(hasBody) {
+    const headers = {};
+
+    if (hasBody) {
+        headers["Content-Type"] = "application/json";
+    }
+
+    if (getToken()) {
+        headers["Authorization"] = "Bearer " + getToken();
+    }
+
+    return headers;
+}
+
 async function apiGet(url) {
     const response = await fetch(API_URL + url, {
         method: "GET",
-        headers: {
-            "Authorization": "Bearer " + getToken()
-        }
+        headers: getHeaders(false)
     });
 
-    const text = await response.text();
-
-    if (!response.ok) {
-        throw new Error(text);
-    }
-
-    if (text === "") {
-        return null;
-    }
-
-    return JSON.parse(text);
+    return readResponse(response);
 }
 
 async function apiPost(url, body) {
     const response = await fetch(API_URL + url, {
         method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": "Bearer " + getToken()
-        },
+        headers: getHeaders(true),
         body: JSON.stringify(body)
     });
 
+    return readResponse(response);
+}
+
+async function apiPut(url) {
+    const response = await fetch(API_URL + url, {
+        method: "PUT",
+        headers: getHeaders(false)
+    });
+
+    return readResponse(response);
+}
+
+async function readResponse(response) {
     const text = await response.text();
 
     if (!response.ok) {
-        throw new Error(text);
+        throw new Error(getErrorMessage(text));
     }
 
     if (text === "") {
@@ -78,23 +90,76 @@ async function apiPost(url, body) {
     return JSON.parse(text);
 }
 
-async function apiPut(url) {
-    const response = await fetch(API_URL + url, {
-        method: "PUT",
-        headers: {
-            "Authorization": "Bearer " + getToken()
+function getErrorMessage(text) {
+    if (!text) {
+        return "A apărut o eroare.";
+    }
+
+    try {
+        const error = JSON.parse(text);
+
+        if (error.errors) {
+            const messages = [];
+
+            Object.keys(error.errors).forEach(key => {
+                error.errors[key].forEach(message => {
+                    messages.push(translateField(key) + ": " + translateMessage(message));
+                });
+            });
+
+            return messages.join(" ");
         }
-    });
 
-    const text = await response.text();
+        if (error.title) {
+            return translateMessage(error.title);
+        }
 
-    if (!response.ok) {
-        throw new Error(text);
+        if (error.message) {
+            return translateMessage(error.message);
+        }
+    } catch {
+        return translateMessage(text);
     }
 
-    if (text === "") {
-        return null;
+    return "A apărut o eroare.";
+}
+
+function translateField(field) {
+    if (field === "CustomerId") {
+        return "Client";
     }
 
-    return JSON.parse(text);
+    if (field === "TrainScheduleId") {
+        return "Cursă";
+    }
+
+    if (field === "SeatNumber") {
+        return "Loc";
+    }
+
+    if (field === "SeatNumbers") {
+        return "Locuri";
+    }
+
+    if (field === "Status") {
+        return "Stare";
+    }
+
+    return field;
+}
+
+function translateMessage(message) {
+    if (message.includes("The CustomerId field is required")) {
+        return "Trebuie să intri din nou în cont.";
+    }
+
+    if (message.includes("The Status field is required")) {
+        return "Starea biletului lipsește.";
+    }
+
+    if (message.includes("One or more validation errors occurred")) {
+        return "Verifică datele introduse.";
+    }
+
+    return message;
 }

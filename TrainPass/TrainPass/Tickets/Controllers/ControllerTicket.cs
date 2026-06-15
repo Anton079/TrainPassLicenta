@@ -27,7 +27,6 @@ namespace TrainPass.Tickets.Controllers
             try
             {
                 var tickets = await _query.GetAllTickets();
-
                 return Ok(tickets);
             }
             catch (TicketNotFoundException ex)
@@ -42,7 +41,7 @@ namespace TrainPass.Tickets.Controllers
         {
             try
             {
-                var customerId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                var customerId = GetCustomerId();
 
                 if (string.IsNullOrWhiteSpace(customerId))
                 {
@@ -50,10 +49,24 @@ namespace TrainPass.Tickets.Controllers
                 }
 
                 var tickets = await _query.GetMyTickets(customerId);
-
                 return Ok(tickets);
             }
             catch (TicketNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+
+        [HttpGet("available-seats/{trainScheduleId}")]
+        [Authorize(Roles = "Customer")]
+        public async Task<ActionResult<SeatsInfoDto>> GetAvailableSeats(int trainScheduleId, [FromQuery] int numberOfSeats = 1)
+        {
+            try
+            {
+                var seats = await _query.GetSeatsInfo(trainScheduleId, numberOfSeats);
+                return Ok(seats);
+            }
+            catch (TrainScheduleNotFoundException ex)
             {
                 return NotFound(ex.Message);
             }
@@ -65,8 +78,16 @@ namespace TrainPass.Tickets.Controllers
         {
             try
             {
-                var response = await _command.CreateTicket(request);
+                var customerId = GetCustomerId();
 
+                if (string.IsNullOrWhiteSpace(customerId))
+                {
+                    return Unauthorized();
+                }
+
+                request.CustomerId = customerId;
+
+                var response = await _command.CreateTicket(request);
                 return Ok(response);
             }
             catch (TrainScheduleNotFoundException ex)
@@ -78,6 +99,46 @@ namespace TrainPass.Tickets.Controllers
                 return BadRequest(ex.Message);
             }
             catch (NoAvailableSeatsException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpPost("buyTickets")]
+        [Authorize(Roles = "Customer")]
+        public async Task<ActionResult<GetAllTicketsDto>> BuyTickets([FromBody] BuyTicketsRequest request)
+        {
+            try
+            {
+                var customerId = GetCustomerId();
+
+                if (string.IsNullOrWhiteSpace(customerId))
+                {
+                    return Unauthorized();
+                }
+
+                request.CustomerId = customerId;
+
+                var response = await _command.CreateTickets(request);
+                return Ok(response);
+            }
+            catch (TrainScheduleNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (SeatAlreadyTakenException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (NoAvailableSeatsException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+            catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
@@ -96,6 +157,11 @@ namespace TrainPass.Tickets.Controllers
             {
                 return NotFound(ex.Message);
             }
+        }
+
+        private string? GetCustomerId()
+        {
+            return User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
         }
     }
 }

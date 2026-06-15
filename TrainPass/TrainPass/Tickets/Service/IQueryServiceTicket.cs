@@ -6,5 +6,6 @@ namespace TrainPass.Tickets.Service
     {
         Task<GetAllTicketsDto> GetAllTickets();
         Task<GetAllTicketsDto> GetMyTickets(string customerId);
+        Task<SeatsInfoDto> GetSeatsInfo(int trainScheduleId, int numberOfSeats);
     }
 }

@@ -1,10 +1,18 @@
 document.getElementById("btn-register").addEventListener("click", registerCustomer);
 
 async function registerCustomer() {
-    const firstName = document.getElementById("firstName").value;
-    const lastName = document.getElementById("lastName").value;
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    const firstName = document.getElementById("firstName").value.trim();
+    const lastName = document.getElementById("lastName").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+    const message = document.getElementById("message");
+
+    message.innerText = "";
+
+    if (firstName === "" || lastName === "" || email === "" || password === "") {
+        message.innerText = "Completează toate câmpurile.";
+        return;
+    }
 
     try {
         const response = await apiPost("/auth/register", {
@@ -15,9 +23,16 @@ async function registerCustomer() {
         });
 
         saveAuthData(response);
-
         window.location.href = "index.html";
     } catch (error) {
-        document.getElementById("message").innerText = error.message;
+        message.innerText = getFriendlyError(error.message);
     }
+}
+
+function getFriendlyError(text) {
+    if (!text) {
+        return "A apărut o eroare.";
+    }
+
+    return text;
 }

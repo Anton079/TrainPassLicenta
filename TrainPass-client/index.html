@@ -2,238 +2,282 @@
 <html lang="ro">
 <head>
     <meta charset="UTF-8">
-    <title>TrainPass - Acasa</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrainPass - Acasă</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
 
 <header class="topbar">
     <div>
-        <h1>🚆 TrainPass</h1>
-        <p>Cauta curse si cumpara bilete de tren rapid.</p>
+        <h1>TrainPass</h1>
+        <p>Caută curse și cumpără bilete de tren rapid.</p>
     </div>
 
     <div class="user-box">
         <span id="user-info">Neautentificat</span>
-        <button id="btn-logout">Iesire</button>
+        <span id="role-badge" class="role-badge">Rol</span>
+        <button id="btn-logout" class="btn-light">Ieșire</button>
     </div>
 </header>
 
 <main class="container">
 
     <section class="hero">
-        <h2>Calatoreste simplu</h2>
-        <p>
-            Alege ruta, verifica trenurile disponibile si cumpara biletul direct din aplicatie.
-        </p>
+        <h2>Călătorește simplu</h2>
+        <p>Alege ruta, verifică trenurile disponibile și cumpără biletul direct din aplicație.</p>
+    </section>
+
+    <section class="steps customer-section">
+        <div class="step-card">
+            <span>1</span>
+            <h3>Caută cursa</h3>
+            <p>Alege stația de plecare, stația de sosire și data călătoriei.</p>
+        </div>
+
+        <div class="step-card">
+            <span>2</span>
+            <h3>Alege trenul</h3>
+            <p>Selectează cursa potrivită din tabelul cu rezultate.</p>
+        </div>
+
+        <div class="step-card">
+            <span>3</span>
+            <h3>Cumpără bilet</h3>
+            <p>Alege numărul de locuri și locurile libere.</p>
+        </div>
     </section>
 
     <section class="admin-section dashboard-grid">
         <div class="dashboard-card">
-            <h3>🚉 Curse</h3>
+            <h3>Curse</h3>
             <p id="total-schedules">0</p>
         </div>
 
         <div class="dashboard-card">
-            <h3>🎫 Bilete totale</h3>
+            <h3>Bilete totale</h3>
             <p id="total-tickets">0</p>
         </div>
 
         <div class="dashboard-card">
-            <h3>✅ Bilete active</h3>
+            <h3>Bilete active</h3>
             <p id="active-tickets">0</p>
         </div>
 
         <div class="dashboard-card">
-            <h3>❌ Bilete anulate</h3>
+            <h3>Bilete anulate</h3>
             <p id="cancelled-tickets">0</p>
         </div>
     </section>
 
-    <section class="grid">
+    <section class="main-panel">
+        <div class="grid">
+            <section class="box">
+                <h2>Caută cursa</h2>
+                <p class="box-text">Completează datele de mai jos pentru a vedea cursele disponibile.</p>
 
-        <div class="box">
-            <h2>🔎 Cauta cursa</h2>
-            <p class="box-text">
-                Completeaza statia de plecare, statia de sosire si data calatoriei.
-            </p>
+                <div class="form-row">
+                    <div>
+                        <label for="search-departure">Stația de plecare</label>
+                        <select id="search-departure">
+                            <option value="">Alege stația</option>
+                            <option value="101">București Nord</option>
+                            <option value="102">Ploiești Vest</option>
+                            <option value="103">Brașov</option>
+                            <option value="104">Constanța</option>
+                            <option value="105">Sibiu</option>
+                            <option value="106">Cluj-Napoca</option>
+                            <option value="107">Iași</option>
+                            <option value="108">Timișoara Nord</option>
+                            <option value="109">Craiova</option>
+                            <option value="110">Arad</option>
+                            <option value="111">Oradea</option>
+                            <option value="112">Galați</option>
+                            <option value="113">Suceava Nord</option>
+                            <option value="114">Târgu Mureș</option>
+                            <option value="115">Baia Mare</option>
+                        </select>
+                    </div>
 
-            <div class="form-row">
-                <select id="search-departure">
-                    <option value="">Statia de plecare</option>
-                    <option value="101">Bucuresti Nord</option>
-                    <option value="102">Ploiesti Vest</option>
-                    <option value="103">Brasov</option>
-                    <option value="104">Constanta</option>
-                    <option value="105">Sibiu</option>
-                    <option value="106">Cluj-Napoca</option>
-                    <option value="107">Iasi</option>
-                    <option value="108">Timisoara Nord</option>
-                    <option value="109">Craiova</option>
-                    <option value="110">Arad</option>
-                    <option value="111">Oradea</option>
-                    <option value="112">Galati</option>
-                    <option value="113">Suceava Nord</option>
-                    <option value="114">Targu Mures</option>
-                    <option value="115">Baia Mare</option>
-                </select>
-
-                <select id="search-arrival">
-                    <option value="">Statia de sosire</option>
-                    <option value="101">Bucuresti Nord</option>
-                    <option value="102">Ploiesti Vest</option>
-                    <option value="103">Brasov</option>
-                    <option value="104">Constanta</option>
-                    <option value="105">Sibiu</option>
-                    <option value="106">Cluj-Napoca</option>
-                    <option value="107">Iasi</option>
-                    <option value="108">Timisoara Nord</option>
-                    <option value="109">Craiova</option>
-                    <option value="110">Arad</option>
-                    <option value="111">Oradea</option>
-                    <option value="112">Galati</option>
-                    <option value="113">Suceava Nord</option>
-                    <option value="114">Targu Mures</option>
-                    <option value="115">Baia Mare</option>
-                </select>
-
-                <input id="search-date" type="date">
-            </div>
-
-            <label class="check-row">
-                <input id="round-trip" type="checkbox">
-                Dus-intors
-            </label>
-
-            <div id="return-date-box" class="form-row hidden">
-                <input id="return-date" type="date">
-            </div>
-
-            <p id="search-error"></p>
-
-            <button id="btn-search-schedules">Cauta cursa</button>
-        </div>
-
-        <div class="box customer-section">
-            <h2>🎫 Cumpara bilet</h2>
-            <p class="box-text">
-                Alege o cursa din tabel, apoi scrie numarul locului dorit.
-            </p>
-
-            <div class="form-row">
-                <input id="ticket-schedule-id" type="number" placeholder="Cursa aleasa">
-                <input id="ticket-seat-number" type="number" placeholder="Numar loc">
-            </div>
-
-            <button id="btn-buy-ticket">Cumpara bilet</button>
-
-            <p id="ticket-message"></p>
-
-            <div id="ticket-card" class="ticket-card hidden">
-                <div class="ticket-card-header">
-                    <h3>🎫 Bilet TrainPass</h3>
-                    <span id="ticket-code">TP-0</span>
+                    <div>
+                        <label for="search-arrival">Stația de sosire</label>
+                        <select id="search-arrival">
+                            <option value="">Alege stația</option>
+                            <option value="101">București Nord</option>
+                            <option value="102">Ploiești Vest</option>
+                            <option value="103">Brașov</option>
+                            <option value="104">Constanța</option>
+                            <option value="105">Sibiu</option>
+                            <option value="106">Cluj-Napoca</option>
+                            <option value="107">Iași</option>
+                            <option value="108">Timișoara Nord</option>
+                            <option value="109">Craiova</option>
+                            <option value="110">Arad</option>
+                            <option value="111">Oradea</option>
+                            <option value="112">Galați</option>
+                            <option value="113">Suceava Nord</option>
+                            <option value="114">Târgu Mureș</option>
+                            <option value="115">Baia Mare</option>
+                        </select>
+                    </div>
                 </div>
 
-                <div class="ticket-card-body">
-                    <p><strong>Ruta:</strong> <span id="ticket-route">-</span></p>
-                    <p><strong>Cursa:</strong> <span id="ticket-schedule">-</span></p>
-                    <p><strong>Loc:</strong> <span id="ticket-seat">-</span></p>
-                    <p><strong>Status:</strong> <span id="ticket-status">Activ</span></p>
+                <div class="form-row">
+                    <div>
+                        <label for="search-date">Data plecării</label>
+                        <input id="search-date" type="date">
+                    </div>
+
+                    <div class="checkbox-box">
+                        <label class="check-row">
+                            <input id="round-trip" type="checkbox">
+                            Călătorie dus-întors
+                        </label>
+                    </div>
                 </div>
 
-                <button onclick="printTicket()">Printeaza bilet</button>
+                <div class="form-row">
+                    <div>
+                        <label for="return-date">Data întoarcerii</label>
+                        <input id="return-date" type="date" disabled>
+                    </div>
+                </div>
+
+                <p id="search-error" class="message error"></p>
+
+                <button id="btn-search-schedules">Caută cursa</button>
+            </section>
+
+            <section class="box customer-section">
+                <h2>Cumpără bilet</h2>
+                <p class="box-text">Alege o cursă, apoi selectează locurile disponibile.</p>
+
+                <div class="form-row">
+                    <div>
+                        <label for="ticket-schedule-id">Cursa aleasă</label>
+                        <input id="ticket-schedule-id" type="number" readonly>
+                    </div>
+
+                    <div>
+                        <label for="ticket-seat-count">Număr de locuri</label>
+                        <input id="ticket-seat-count" type="number" min="1" value="1">
+                    </div>
+                </div>
+
+                <div id="seat-info-box" class="seat-info-box">
+                    <p>Selectează mai întâi o cursă din tabel.</p>
+                </div>
+
+                <div id="seat-selects" class="seat-selects"></div>
+
+                <button id="btn-buy-ticket">Cumpără bilet</button>
+
+                <p id="ticket-message" class="message"></p>
+
+                <div id="ticket-card" class="ticket-card hidden">
+                    <div class="ticket-card-header">
+                        <h3>Bilet TrainPass</h3>
+                        <span id="ticket-code">TP-0</span>
+                    </div>
+
+                    <div class="ticket-card-body">
+                        <p><strong>Ruta:</strong> <span id="ticket-route">-</span></p>
+                        <p><strong>Cursa:</strong> <span id="ticket-schedule">-</span></p>
+                        <p><strong>Locuri:</strong> <span id="ticket-seat">-</span></p>
+                        <p><strong>Total:</strong> <span id="ticket-total">-</span></p>
+                        <p><strong>Stare:</strong> <span id="ticket-status">Activ</span></p>
+                    </div>
+
+                    <div class="ticket-card-actions">
+                        <button id="btn-print-last-ticket">Printează</button>
+                        <button id="btn-save-last-ticket" class="btn-dark">Salvează PDF</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="box">
+            <div class="section-title">
+                <div>
+                    <h2>Curse disponibile</h2>
+                    <p class="box-text">Primele 10 curse sunt vizibile direct. Pentru restul, folosește derularea.</p>
+                </div>
             </div>
-        </div>
 
-    </section>
-
-    <section class="box">
-        <div class="section-title">
-            <div>
-                <h2>🚉 Curse disponibile</h2>
-                <p class="box-text">
-                    Cursele sunt afisate automat. Pentru mai multe rezultate, foloseste scroll-ul din tabel.
-                </p>
+            <div class="table-wrapper limited-table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tip</th>
+                            <th>Rută</th>
+                            <th>Plecare</th>
+                            <th>Sosire</th>
+                            <th>Preț</th>
+                            <th>Acțiune</th>
+                        </tr>
+                    </thead>
+                    <tbody id="schedules-table"></tbody>
+                </table>
             </div>
-        </div>
+        </section>
 
-        <div class="table-wrapper schedule-scroll">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Tip</th>
-                        <th>Ruta</th>
-                        <th>Plecare</th>
-                        <th>Sosire</th>
-                        <th>Pret</th>
-                        <th>Actiune</th>
-                    </tr>
-                </thead>
-
-                <tbody id="schedules-table"></tbody>
-            </table>
-        </div>
-    </section>
-
-    <section class="box customer-section">
-        <div class="section-title">
-            <div>
-                <h2>🧾 Biletele mele</h2>
-                <p class="box-text">
-                    Biletele tale sunt afisate automat.
-                </p>
+        <section class="box customer-section">
+            <div class="section-title">
+                <div>
+                    <h2>Biletele mele</h2>
+                    <p class="box-text">Aici apar biletele cumpărate de tine.</p>
+                </div>
             </div>
-        </div>
 
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Bilet</th>
-                        <th>Cursa</th>
-                        <th>Loc</th>
-                        <th>Status</th>
-                        <th>Actiune</th>
-                    </tr>
-                </thead>
-
-                <tbody id="my-tickets-table"></tbody>
-            </table>
-        </div>
-    </section>
-
-    <section class="box admin-section">
-        <div class="section-title">
-            <div>
-                <h2>🛠️ Administrare bilete</h2>
-                <p class="box-text">
-                    Aici se afiseaza automat toate biletele din aplicatie.
-                </p>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Bilet</th>
+                            <th>Rută</th>
+                            <th>Plecare</th>
+                            <th>Sosire</th>
+                            <th>Loc</th>
+                            <th>Preț</th>
+                            <th>Stare</th>
+                            <th>Acțiuni</th>
+                        </tr>
+                    </thead>
+                    <tbody id="my-tickets-table"></tbody>
+                </table>
             </div>
-        </div>
+        </section>
 
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Bilet</th>
-                        <th>Client</th>
-                        <th>Cursa</th>
-                        <th>Loc</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
+        <section class="box admin-section">
+            <div class="section-title">
+                <div>
+                    <h2>Administrare bilete</h2>
+                    <p class="box-text">Aici apar toate biletele din aplicație.</p>
+                </div>
+            </div>
 
-                <tbody id="all-tickets-table"></tbody>
-            </table>
-        </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Bilet</th>
+                            <th>Client</th>
+                            <th>Cursă</th>
+                            <th>Loc</th>
+                            <th>Stare</th>
+                        </tr>
+                    </thead>
+                    <tbody id="all-tickets-table"></tbody>
+                </table>
+            </div>
+        </section>
     </section>
 
 </main>
 
 <footer>
-    <p>TrainPass © 2026 - Aplicatie pentru bilete de tren</p>
+    <p>TrainPass © 2026 - Aplicație pentru bilete de tren</p>
 </footer>
 
 <script src="js/api.js"></script>
