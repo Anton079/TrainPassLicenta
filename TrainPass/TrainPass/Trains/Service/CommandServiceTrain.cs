@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using TrainPass.Trains.Dtos;
+using TrainPass.Trains.Models;
 using TrainPass.Trains.Repository;
 
 namespace TrainPass.Trains.Service
@@ -14,6 +16,15 @@ namespace TrainPass.Trains.Service
             _repo = repo;
         }
 
-        
+        public async Task<TrainResponse> CreateTrain(TrainRequest request)
+        {
+            var train = _mapper.Map<Train>(request);
+
+            var createdTrain = await _repo.CreateTrain(train);
+
+            var response = _mapper.Map<TrainResponse>(createdTrain);
+
+            return response;
+        }
     }
 }

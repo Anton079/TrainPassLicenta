@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using TrainPass.Tickets.Dtos;
 using TrainPass.Tickets.Exceptions;
 using TrainPass.Tickets.Service;
@@ -20,16 +21,41 @@ namespace TrainPass.Tickets.Controllers
         }
 
         [HttpGet("allTickets")]
-        [Authorize(Roles = "Customer, Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<GetAllTicketsDto>> GetAllTickets()
         {
             try
             {
                 var tickets = await _query.GetAllTickets();
+
                 return Ok(tickets);
-            }catch(TicketNotFoundException ex)
+            }
+            catch (TicketNotFoundException ex)
             {
-                return BadRequest(ex.Message);
+                return NotFound(ex.Message);
+            }
+        }
+
+        [HttpGet("my-tickets")]
+        [Authorize(Roles = "Customer")]
+        public async Task<ActionResult<GetAllTicketsDto>> GetMyTickets()
+        {
+            try
+            {
+                var customerId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+                if (string.IsNullOrWhiteSpace(customerId))
+                {
+                    return Unauthorized();
+                }
+
+                var tickets = await _query.GetMyTickets(customerId);
+
+                return Ok(tickets);
+            }
+            catch (TicketNotFoundException ex)
+            {
+                return NotFound(ex.Message);
             }
         }
 
@@ -40,6 +66,7 @@ namespace TrainPass.Tickets.Controllers
             try
             {
                 var response = await _command.CreateTicket(request);
+
                 return Ok(response);
             }
             catch (TrainScheduleNotFoundException ex)

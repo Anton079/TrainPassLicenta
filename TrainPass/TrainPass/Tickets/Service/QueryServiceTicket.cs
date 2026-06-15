@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using TrainPass.Tickets.Dtos;
+﻿using TrainPass.Tickets.Dtos;
 using TrainPass.Tickets.Exceptions;
 using TrainPass.Tickets.Repository;
 
@@ -7,24 +6,35 @@ namespace TrainPass.Tickets.Service
 {
     public class QueryServiceTicket : IQueryServiceTicket
     {
-        private readonly IMapper _mapper;
         private readonly ITicketRepo _repo;
 
-        public QueryServiceTicket(IMapper mapper, ITicketRepo repo)
+        public QueryServiceTicket(ITicketRepo repo)
         {
-            _mapper = mapper;
             _repo = repo;
         }
 
         public async Task<GetAllTicketsDto> GetAllTickets()
         {
-            GetAllTicketsDto ticket = await _repo.GetAllTickets();
+            var tickets = await _repo.GetAllTickets();
 
-            if (ticket == null)
+            if (tickets == null || tickets.ticketList == null || !tickets.ticketList.Any())
+            {
                 throw new TicketNotFoundException();
+            }
 
-            return ticket;
+            return tickets;
+        }
 
+        public async Task<GetAllTicketsDto> GetMyTickets(string customerId)
+        {
+            var tickets = await _repo.GetMyTickets(customerId);
+
+            if (tickets == null || tickets.ticketList == null || !tickets.ticketList.Any())
+            {
+                throw new TicketNotFoundException();
+            }
+
+            return tickets;
         }
     }
 }

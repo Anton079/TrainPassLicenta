@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 using TrainPass.Data;
 using TrainPass.TrainSchedules.Dtos;
 using TrainPass.TrainSchedules.Models;
@@ -19,28 +19,90 @@ namespace TrainPass.TrainSchedules.Repository
 
         public async Task<GetAllTrainSchedule> AllTrainSchedule()
         {
-            var routes = await _db.TrainSchedules.ToListAsync();
-            var map = _mapper.Map<List<TrainScheduleResponse>>(routes);
+            var trainSchedules = await _db.TrainSchedules.ToListAsync();
+
+            var mappedTrainSchedules = _mapper.Map<List<TrainScheduleResponse>>(trainSchedules);
 
             return new GetAllTrainSchedule
             {
-                listTrainSchedule = map
+                listTrainSchedule = mappedTrainSchedules
+            };
+        }
+
+        public async Task<GetAllTrainSchedule> SearchTrainSchedules(int departureStationId, int arrivalStationId, DateTime date)
+        {
+            var startDate = date.Date;
+            var endDate = startDate.AddDays(1);
+
+            var trainSchedules = await _db.TrainSchedules
+                .Where(trainSchedule =>
+                    trainSchedule.DepartureStationId == departureStationId &&
+                    trainSchedule.ArrivalStationId == arrivalStationId &&
+                    trainSchedule.DepartureTime >= startDate &&
+                    trainSchedule.DepartureTime < endDate)
+                .ToListAsync();
+
+            var mappedTrainSchedules = _mapper.Map<List<TrainScheduleResponse>>(trainSchedules);
+
+            return new GetAllTrainSchedule
+            {
+                listTrainSchedule = mappedTrainSchedules
             };
         }
 
         public async Task<TrainSchedule> CreateTrainSchedule(TrainSchedule trainSchedule)
         {
             _db.TrainSchedules.Add(trainSchedule);
+
             await _db.SaveChangesAsync();
 
             return trainSchedule;
         }
 
-        public async Task<bool> TrainScheduleExists(int trainScheduleId)
+        public async Task<TrainSchedule?> UpdateTrainSchedule(int id, TrainSchedule trainSchedule)
         {
-            return await _db.TrainSchedules.AnyAsync(t => trainScheduleId == t.Id);
+            var existingTrainSchedule = await _db.TrainSchedules
+                .FirstOrDefaultAsync(trainSchedule => trainSchedule.Id == id);
+
+            if (existingTrainSchedule == null)
+            {
+                return null;
+            }
+
+            existingTrainSchedule.TrainId = trainSchedule.TrainId;
+            existingTrainSchedule.DepartureStationId = trainSchedule.DepartureStationId;
+            existingTrainSchedule.ArrivalStationId = trainSchedule.ArrivalStationId;
+            existingTrainSchedule.DepartureTime = trainSchedule.DepartureTime;
+            existingTrainSchedule.ArrivalTime = trainSchedule.ArrivalTime;
+            existingTrainSchedule.Price = trainSchedule.Price;
+
+            await _db.SaveChangesAsync();
+
+            return existingTrainSchedule;
         }
 
-        
+
+        public async Task<bool> DeleteTrainSchedule(int id)
+        {
+            var trainSchedule = await _db.TrainSchedules
+                .FirstOrDefaultAsync(trainSchedule => trainSchedule.Id == id);
+
+            if (trainSchedule == null)
+            {
+                return false;
+            }
+
+            _db.TrainSchedules.Remove(trainSchedule);
+
+            await _db.SaveChangesAsync();
+
+            return true;
+        }
+
+        public async Task<bool> TrainScheduleExists(int trainScheduleId)
+        {
+            return await _db.TrainSchedules
+                .AnyAsync(trainSchedule => trainSchedule.Id == trainScheduleId);
+        }
     }
 }

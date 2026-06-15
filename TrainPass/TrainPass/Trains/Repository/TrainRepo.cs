@@ -3,6 +3,7 @@ using System.Data.Entity;
 using TrainPass.Customers.Dtos;
 using TrainPass.Data;
 using TrainPass.Trains.Dtos;
+using TrainPass.Trains.Models;
 
 namespace TrainPass.Trains.Repository
 {
@@ -26,7 +27,14 @@ namespace TrainPass.Trains.Repository
             {
                 trainList = map
             };
-            
+        }
+
+        public async Task<Train> CreateTrain(Train train)
+        {
+            _db.Trains.Add(train);
+            await _db.SaveChangesAsync();
+
+            return train;
         }
     }
 }

@@ -22,9 +22,4 @@
     <PackageReference Include="MySqlConnector" Version="2.3.7" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="TrainSchedules\Service\" />
-    <Folder Include="Trains\Exceptions\" />
-  </ItemGroup>
-
 </Project>

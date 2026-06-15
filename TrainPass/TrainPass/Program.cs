@@ -10,6 +10,15 @@ using TrainPass.Customers.Mappings;
 using TrainPass.Customers.Repository;
 using TrainPass.Customers.Services;
 using TrainPass.Data;
+using TrainPass.Tickets.Mappings;
+using TrainPass.Tickets.Repository;
+using TrainPass.Tickets.Service;
+using TrainPass.Trains.Mappings;
+using TrainPass.Trains.Repository;
+using TrainPass.Trains.Service;
+using TrainPass.TrainSchedules.Mappings;
+using TrainPass.TrainSchedules.Repository;
+using TrainPass.TrainSchedules.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -72,12 +81,29 @@ builder.Services.AddFluentMigratorCore()
         logging.AddFluentMigratorConsole();
     });
 
-builder.Services.AddScoped<IQueryServiceCustomer, QueryServiceCustomer>();
 builder.Services.AddScoped<ICustomerRepo, CustomerRepo>();
+builder.Services.AddScoped<IQueryServiceCustomer, QueryServiceCustomer>();
+
+builder.Services.AddScoped<ITicketRepo, TicketRepo>();
+builder.Services.AddScoped<ICommandServiceTicket, CommandServiceTicket>();
+builder.Services.AddScoped<IQueryServiceTicket, QueryServiceTicket>();
+
+builder.Services.AddScoped<ITrainRepo, TrainRepo>();
+builder.Services.AddScoped<ICommandServiceTrain, CommandServiceTrain>();
+builder.Services.AddScoped<IQueryServiceTrain, QueryServiceTrain>();
+
+builder.Services.AddScoped<ITrainScheduleRepo, TrainScheduleRepo>();
+builder.Services.AddScoped<ICommandServiceTrainSchedule, CommandServiceTrainSchedule>();
+builder.Services.AddScoped<IQueryServiceTrainSchedule, QueryServiceTrainSchedule>();
 
 builder.Services.AddScoped<JwtService>();
 
-builder.Services.AddAutoMapper(typeof(MappingProfileCustomer));
+builder.Services.AddAutoMapper(
+    typeof(MappingProfileCustomer),
+    typeof(MappingProfileTickets),
+    typeof(MappingProfileTrain),
+    typeof(MappingProfileTrainSchedule)
+);
 
 var jwtKey = builder.Configuration["Jwt:Key"];
 
