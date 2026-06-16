@@ -1,5 +1,51 @@
 [
   {
+    "ContainingType": "TrainPass.Stations.Controllers.StationController",
+    "Method": "CreateStation",
+    "RelativePath": "api/v1/admin/stations/createStation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "TrainPass.Stations.Dtos.StationRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TrainPass.Stations.Dtos.StationResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TrainPass.Stations.Controllers.StationController",
+    "Method": "GetAllStations",
+    "RelativePath": "api/v1/admin/stations/getStations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "TrainPass.Stations.Dtos.GetAllStationsDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "TrainPass.Auth.Controllers.AuthController",
     "Method": "LoginAdmin",
     "RelativePath": "api/v1/auth/login-admin",

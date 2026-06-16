@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
 using TrainPass.Customers.Dtos;
 using TrainPass.Data;
 using TrainPass.Trains.Dtos;

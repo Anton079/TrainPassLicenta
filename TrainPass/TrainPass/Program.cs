@@ -11,6 +11,8 @@ using TrainPass.Customers.Mappings;
 using TrainPass.Customers.Repository;
 using TrainPass.Customers.Services;
 using TrainPass.Data;
+using TrainPass.Stations.Repository;
+using TrainPass.Stations.Service;
 using TrainPass.Tickets.Mappings;
 using TrainPass.Tickets.Repository;
 using TrainPass.Tickets.Service;
@@ -107,6 +109,10 @@ builder.Services.AddScoped<IQueryServiceTrain, QueryServiceTrain>();
 builder.Services.AddScoped<ITrainScheduleRepo, TrainScheduleRepo>();
 builder.Services.AddScoped<ICommandServiceTrainSchedule, CommandServiceTrainSchedule>();
 builder.Services.AddScoped<IQueryServiceTrainSchedule, QueryServiceTrainSchedule>();
+
+builder.Services.AddScoped<IStationRepo, StationRepo>();
+builder.Services.AddScoped<ICommandServiceStation, CommandServiceStation>();
+builder.Services.AddScoped<IQueryServiceStation, QueryServiceStation>();
 
 builder.Services.AddScoped<JwtService>();
 

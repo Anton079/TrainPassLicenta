@@ -1,56 +1,52 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata;
 using TrainPass.Stations.Dtos;
 using TrainPass.Stations.Exceptions;
 using TrainPass.Stations.Service;
 
 namespace TrainPass.Stations.Controllers
 {
-    public class ControllerStation
+    [ApiController]
+    [Route("api/v1/admin/stations")]
+    public class StationController : ControllerBase
     {
-        [ApiController]
-        [Route("api/v1/admin/stations")]
-        public class StationController : ControllerBase
+        private readonly IQueryServiceStation _query;
+        private readonly ICommandServiceStation _command;
+
+        public StationController(IQueryServiceStation query, ICommandServiceStation command)
         {
-            private readonly IQueryServiceStation _querry;
-            private readonly ICommandServiceStation _command;
-            
-            public StationController(IQueryServiceStation querry, ICommandServiceStation command)
-            {
-                _querry = querry;
-                _command = command;
-            }
+            _query = query;
+            _command = command;
+        }
 
-            [HttpGet("getStations")]
-            [Authorize(Roles = "Customer, Admin")]
-            public async Task<ActionResult<GetAllStationsDto>> GetAllStations()
+        [HttpGet("getStations")]
+        [Authorize(Roles = "Admin,Customer")]
+        public async Task<ActionResult<GetAllStationsDto>> GetAllStations()
+        {
+            try
             {
-                try
-                {
-                    var stations = await _querry.GetAllStation();
-                    return Ok(stations);
-                }catch(StationNotFoundException ex)
-                {
-                    return BadRequest(ex.Message);
-                }
+                var stations = await _query.GetAllStation();
+                return Ok(stations);
             }
-
-            [HttpPost("createStation")]
-            [Authorize(Roles = "Admin")]
-            public async Task<ActionResult<StationRequest>> CreateStation(StationRequest request)
+            catch (StationNotFoundException ex)
             {
-                try
-                {
-                    var station = await _command.CreateStation(request);
-                    return Ok(station);
-                }catch(StationAlreadyExistException ex)
-                {
-                    return BadRequest(ex.Message);
-                }
+                return NotFound(ex.Message);
             }
+        }
 
-            
+        [HttpPost("createStation")]
+        [Authorize(Roles = "Admin")]
+        public async Task<ActionResult<StationResponse>> CreateStation([FromBody] StationRequest request)
+        {
+            try
+            {
+                var station = await _command.CreateStation(request);
+                return Ok(station);
+            }
+            catch (StationAlreadyExistException ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

@@ -8,9 +8,10 @@ namespace TrainPass.Customers.Mappings
     {
         public MappingProfileCustomer()
         {
+            CreateMap<CustomerRequest, Customer>();
+            CreateMap<Customer, CustomerResponse>();
             CreateMap<CustomerRequest, CustomerResponse>();
             CreateMap<CustomerResponse, CustomerRequest>();
-            CreateMap<List<Customer>, GetAllCustomersDto>();
         }
     }
 }

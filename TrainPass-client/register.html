@@ -9,38 +9,56 @@
 </head>
 <body>
 
+<header class="auth-header">
+    <div class="auth-header-content">
+        <div class="auth-logo">
+            <div class="auth-logo-icon">T</div>
+            <div>
+                <h1>TrainPass</h1>
+                <p>Rezervare bilete de tren</p>
+            </div>
+        </div>
+    </div>
+</header>
+
 <main class="auth-page">
-    <section class="auth-info">
-        <h1>TrainPass</h1>
-        <p>Creează un cont și cumpără bilete de tren rapid, simplu și sigur.</p>
-    </section>
-
     <section class="auth-card">
-        <h2>Creare cont</h2>
-        <p>Completează datele pentru a crea un cont de utilizator.</p>
+        <div class="auth-info">
+            <h2>TrainPass</h2>
+            <p>Creează un cont și cumpără bilete de tren rapid, simplu și sigur.</p>
+        </div>
 
-        <label for="firstName">Prenume</label>
-        <input id="firstName" type="text" placeholder="Prenume">
+        <div class="auth-form-box">
+            <h2>Creare cont</h2>
+            <p>Completează datele pentru a crea un cont de utilizator.</p>
 
-        <label for="lastName">Nume</label>
-        <input id="lastName" type="text" placeholder="Nume">
+            <label for="firstName">Prenume</label>
+            <input id="firstName" type="text" placeholder="Prenume">
 
-        <label for="email">Email</label>
-        <input id="email" type="email" placeholder="exemplu@email.com">
+            <label for="lastName">Nume</label>
+            <input id="lastName" type="text" placeholder="Nume">
 
-        <label for="password">Parolă</label>
-        <input id="password" type="password" placeholder="Parolă">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="exemplu@email.com">
 
-        <button id="btn-register">Creează cont</button>
+            <label for="password">Parolă</label>
+            <input id="password" type="password" placeholder="Parolă">
 
-        <p id="message" class="message error"></p>
+            <button id="btn-register">Creează cont</button>
 
-        <p class="auth-link">
-            Ai deja cont?
-            <a href="login.html">Autentificare</a>
-        </p>
+            <p id="message" class="message error"></p>
+
+            <p class="auth-link">
+                Ai deja cont?
+                <a href="login.html">Autentificare</a>
+            </p>
+        </div>
     </section>
 </main>
+
+<footer class="auth-footer">
+    <p>TrainPass - Lucrare de licență</p>
+</footer>
 
 <script src="js/api.js"></script>
 <script src="js/register.js"></script>

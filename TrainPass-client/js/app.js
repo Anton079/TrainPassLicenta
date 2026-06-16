@@ -5,7 +5,8 @@ let schedules = [];
 let myTickets = [];
 let allTickets = [];
 let customers = [];
-let lastTicket = null;
+let schedulesPage = 1;
+const schedulesPerPage = 10;
 
 document.addEventListener("DOMContentLoaded", startApp);
 
@@ -53,13 +54,13 @@ function showPageByRole() {
 function setEvents() {
     click("btn-logout", logout);
     click("btn-search", searchSchedules);
-    click("btn-clear-search", loadSchedules);
+    click("btn-clear-search", resetSearch);
     click("btn-buy-ticket", buyTicket);
-    click("btn-print-ticket", printLastTicket);
-    click("btn-download-ticket", downloadLastTicket);
     click("btn-create-train", createTrain);
     click("btn-create-station", createStation);
     click("btn-create-schedule", createSchedule);
+    click("btn-prev-schedules", previousSchedulesPage);
+    click("btn-next-schedules", nextSchedulesPage);
 }
 
 async function loadStations() {
@@ -67,7 +68,7 @@ async function loadStations() {
         const data = await apiGet("/admin/stations/getStations");
         stations = getList(data, "stationList");
     } catch {
-        stations = getDefaultStations();
+        stations = [];
     }
 
     fillStationSelect("search-departure");
@@ -96,10 +97,12 @@ async function loadSchedules() {
         const data = await apiGet("/train-schedules/get");
         allSchedules = getList(data, "listTrainSchedule");
         schedules = allSchedules;
+        schedulesPage = 1;
         setMessage("search-message", "", false);
     } catch (error) {
         allSchedules = [];
         schedules = [];
+        schedulesPage = 1;
         setMessage("search-message", error.message, true);
     }
 
@@ -143,38 +146,53 @@ async function loadCustomers() {
     updateDashboard();
 }
 
-async function searchSchedules() {
+function searchSchedules() {
     const departureId = inputValue("search-departure");
     const arrivalId = inputValue("search-arrival");
     const date = inputValue("search-date");
 
-    if (!departureId || !arrivalId || !date) {
-        setMessage("search-message", "Alege plecarea, sosirea și data.", true);
+    if (!departureId && !arrivalId && !date) {
+        setMessage("search-message", "Alege cel puțin un filtru.", true);
         return;
     }
 
-    if (departureId === arrivalId) {
+    if (departureId && arrivalId && departureId === arrivalId) {
         setMessage("search-message", "Stația de plecare trebuie să fie diferită de stația de sosire.", true);
         return;
     }
 
-    try {
-        const url = "/train-schedules/search?departureStationId=" + departureId + "&arrivalStationId=" + arrivalId + "&date=" + date;
-        const data = await apiGet(url);
+    schedules = allSchedules.filter(function (schedule) {
+        const scheduleDepartureId = String(value(schedule, "departureStationId"));
+        const scheduleArrivalId = String(value(schedule, "arrivalStationId"));
+        const scheduleDepartureTime = value(schedule, "departureTime");
 
-        schedules = getList(data, "listTrainSchedule");
-        renderSchedules();
+        const matchDeparture = !departureId || scheduleDepartureId === departureId;
+        const matchArrival = !arrivalId || scheduleArrivalId === arrivalId;
+        const matchDate = !date || isSameDate(scheduleDepartureTime, date);
 
-        if (schedules.length === 0) {
-            setMessage("search-message", "Nu există curse pentru căutarea aleasă.", true);
-        } else {
-            setMessage("search-message", "Curse găsite: " + schedules.length, false);
-        }
-    } catch (error) {
-        schedules = [];
-        renderSchedules();
-        setMessage("search-message", error.message, true);
+        return matchDeparture && matchArrival && matchDate;
+    });
+
+    schedulesPage = 1;
+    renderSchedules();
+
+    if (schedules.length === 0) {
+        setMessage("search-message", "Nu există curse pentru filtrele alese.", true);
+    } else {
+        setMessage("search-message", "Curse găsite: " + schedules.length, false);
     }
+}
+
+function resetSearch() {
+    setInput("search-departure", "");
+    setInput("search-arrival", "");
+    setInput("search-date", "");
+
+    schedules = allSchedules;
+    schedulesPage = 1;
+
+    renderSchedules();
+    setMessage("search-message", "", false);
 }
 
 async function buyTicket() {
@@ -194,10 +212,10 @@ async function buyTicket() {
     };
 
     try {
-        const data = await apiPost("/tickets/buyTicket", body);
+        await apiPost("/tickets/buyTicket", body);
 
-        setMessage("ticket-message", "Biletul a fost cumpărat.", false);
-        showTicketCard(data, body);
+        setMessage("ticket-message", "Biletul a fost cumpărat. Îl găsești în tabelul Biletele mele.", false);
+        clearInputs(["ticket-schedule-id", "ticket-seat"]);
         await loadMyTickets();
     } catch (error) {
         setMessage("ticket-message", error.message, true);
@@ -335,10 +353,15 @@ function renderSchedules() {
 
     if (schedules.length === 0) {
         emptyRow(table, 6, "Nu există curse de afișat.");
+        updateSchedulesPagination();
         return;
     }
 
-    schedules.forEach(function (schedule) {
+    const start = (schedulesPage - 1) * schedulesPerPage;
+    const end = start + schedulesPerPage;
+    const pageSchedules = schedules.slice(start, end);
+
+    pageSchedules.forEach(function (schedule) {
         const id = value(schedule, "id");
         const departureId = value(schedule, "departureStationId");
         const arrivalId = value(schedule, "arrivalStationId");
@@ -358,6 +381,41 @@ function renderSchedules() {
 
         table.appendChild(row);
     });
+
+    updateSchedulesPagination();
+}
+
+function previousSchedulesPage() {
+    if (schedulesPage > 1) {
+        schedulesPage--;
+        renderSchedules();
+    }
+}
+
+function nextSchedulesPage() {
+    const totalPages = Math.ceil(schedules.length / schedulesPerPage);
+
+    if (schedulesPage < totalPages) {
+        schedulesPage++;
+        renderSchedules();
+    }
+}
+
+function updateSchedulesPagination() {
+    const pageInfo = document.getElementById("schedules-page-info");
+    const prevButton = document.getElementById("btn-prev-schedules");
+    const nextButton = document.getElementById("btn-next-schedules");
+
+    if (!pageInfo || !prevButton || !nextButton) {
+        return;
+    }
+
+    const totalPages = Math.ceil(schedules.length / schedulesPerPage) || 1;
+
+    pageInfo.innerText = "Pagina " + schedulesPage + " din " + totalPages;
+
+    prevButton.disabled = schedulesPage === 1;
+    nextButton.disabled = schedulesPage === totalPages;
 }
 
 function renderAdminSchedules() {
@@ -472,16 +530,16 @@ function renderMyTickets() {
         const purchaseDate = value(ticket, "purchaseDate");
         const status = statusText(value(ticket, "status"));
 
-        let buttons =
+        let actions =
             "<div class='table-actions'>" +
             "<button class='btn-small btn-light' onclick='printTicketById(" + id + ")'>Print</button>" +
             "<button class='btn-small btn-light' onclick='downloadTicketById(" + id + ")'>Download</button>";
 
         if (status === "Activ") {
-            buttons += "<button class='btn-small btn-danger' onclick='cancelTicket(" + id + ")'>Anulează</button>";
+            actions += "<button class='btn-small btn-danger' onclick='cancelTicket(" + id + ")'>Anulează</button>";
         }
 
-        buttons += "</div>";
+        actions += "</div>";
 
         const row = document.createElement("tr");
 
@@ -491,7 +549,7 @@ function renderMyTickets() {
             "<td>" + seatNumber + "</td>" +
             "<td>" + formatDate(purchaseDate) + "</td>" +
             "<td>" + statusBadge(status) + "</td>" +
-            "<td>" + buttons + "</td>";
+            "<td>" + actions + "</td>";
 
         table.appendChild(row);
     });
@@ -573,41 +631,6 @@ function selectSchedule(scheduleId) {
     }
 }
 
-function showTicketCard(data, request) {
-    const ticket = normalizeTicket(data, request);
-    lastTicket = ticket;
-
-    setText("ticket-code", ticket.id);
-    setText("ticket-route", scheduleRoute(ticket.trainScheduleId));
-    setText("ticket-date", formatDate(ticket.purchaseDate));
-    setText("ticket-seat-view", ticket.seatNumber);
-    setTicketStatus("ticket-status", ticket.status);
-
-    const card = document.getElementById("ticket-card");
-
-    if (card) {
-        card.classList.remove("hidden");
-    }
-}
-
-function printLastTicket() {
-    if (!lastTicket) {
-        alert("Nu există bilet de printat.");
-        return;
-    }
-
-    printTicketData(lastTicket);
-}
-
-function downloadLastTicket() {
-    if (!lastTicket) {
-        alert("Nu există bilet de descărcat.");
-        return;
-    }
-
-    downloadTicketData(lastTicket);
-}
-
 function printTicketById(ticketId) {
     const ticket = findMyTicket(ticketId);
 
@@ -616,7 +639,7 @@ function printTicketById(ticketId) {
         return;
     }
 
-    printTicketData(normalizeTicket(ticket, null));
+    printTicketData(makeTicketData(ticket));
 }
 
 function downloadTicketById(ticketId) {
@@ -627,7 +650,7 @@ function downloadTicketById(ticketId) {
         return;
     }
 
-    downloadTicketData(normalizeTicket(ticket, null));
+    downloadTicketData(makeTicketData(ticket));
 }
 
 function printTicketData(ticket) {
@@ -658,6 +681,16 @@ function downloadTicketData(ticket) {
     link.click();
 
     URL.revokeObjectURL(link.href);
+}
+
+function makeTicketData(ticket) {
+    return {
+        id: value(ticket, "id"),
+        trainScheduleId: value(ticket, "trainScheduleId"),
+        seatNumber: value(ticket, "seatNumber"),
+        purchaseDate: value(ticket, "purchaseDate"),
+        status: statusText(value(ticket, "status"))
+    };
 }
 
 function ticketHtml(ticket) {
@@ -712,9 +745,17 @@ function ticketHtml(ticket) {
             font-size: 20px;
         }
 
-        p {
-            margin: 0 0 10px;
+        .row {
+            display: grid;
+            grid-template-columns: 170px 1fr;
+            gap: 10px;
+            margin-bottom: 12px;
             font-size: 16px;
+        }
+
+        .label {
+            color: #64748b;
+            font-weight: 700;
         }
 
         .badge {
@@ -723,18 +764,6 @@ function ticketHtml(ticket) {
             padding: 7px 12px;
             background: #dcfce7;
             color: #166534;
-            font-weight: 700;
-        }
-
-        .row {
-            display: grid;
-            grid-template-columns: 170px 1fr;
-            gap: 10px;
-            margin-bottom: 12px;
-        }
-
-        .label {
-            color: #64748b;
             font-weight: 700;
         }
 
@@ -786,19 +815,6 @@ function ticketHtml(ticket) {
     </div>
 </body>
 </html>`;
-}
-
-function normalizeTicket(data, request) {
-    const ticket = data && data.ticket ? data.ticket : data || {};
-    const source = request || {};
-
-    return {
-        id: value(ticket, "id") || "-",
-        trainScheduleId: value(ticket, "trainScheduleId") || source.trainScheduleId,
-        seatNumber: value(ticket, "seatNumber") || source.seatNumber,
-        purchaseDate: value(ticket, "purchaseDate") || source.purchaseDate,
-        status: statusText(value(ticket, "status") || source.status)
-    };
 }
 
 function findMyTicket(ticketId) {
@@ -955,28 +971,6 @@ function statusBadge(status) {
     return "<span class='badge badge-blue'>" + status + "</span>";
 }
 
-function setTicketStatus(id, status) {
-    const element = document.getElementById(id);
-
-    if (!element) {
-        return;
-    }
-
-    element.innerText = status;
-
-    if (status === "Activ") {
-        element.className = "badge badge-green";
-        return;
-    }
-
-    if (status === "Anulat") {
-        element.className = "badge badge-red";
-        return;
-    }
-
-    element.className = "badge badge-blue";
-}
-
 function getList(data, propertyName) {
     if (!data) {
         return [];
@@ -1098,6 +1092,24 @@ function formatDate(valueToFormat) {
     });
 }
 
+function isSameDate(scheduleDate, selectedDate) {
+    if (!scheduleDate || !selectedDate) {
+        return false;
+    }
+
+    const date = new Date(scheduleDate);
+
+    if (isNaN(date.getTime())) {
+        return false;
+    }
+
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+
+    return year + "-" + month + "-" + day === selectedDate;
+}
+
 function formatPrice(price) {
     if (price === undefined || price === null || price === "") {
         return "-";
@@ -1112,26 +1124,6 @@ function isAdmin() {
 
 function isCustomer() {
     return String(getRole()).toLowerCase() === "customer";
-}
-
-function getDefaultStations() {
-    return [
-        { id: 101, name: "București Nord", city: "București" },
-        { id: 102, name: "Ploiești Vest", city: "Ploiești" },
-        { id: 103, name: "Brașov", city: "Brașov" },
-        { id: 104, name: "Sinaia", city: "Sinaia" },
-        { id: 105, name: "Predeal", city: "Predeal" },
-        { id: 106, name: "Cluj-Napoca", city: "Cluj-Napoca" },
-        { id: 107, name: "Alba Iulia", city: "Alba Iulia" },
-        { id: 108, name: "Sibiu", city: "Sibiu" },
-        { id: 109, name: "Timișoara Nord", city: "Timișoara" },
-        { id: 110, name: "Arad", city: "Arad" },
-        { id: 111, name: "Iași", city: "Iași" },
-        { id: 112, name: "Suceava", city: "Suceava" },
-        { id: 113, name: "Constanța", city: "Constanța" },
-        { id: 114, name: "Craiova", city: "Craiova" },
-        { id: 115, name: "Pitești", city: "Pitești" }
-    ];
 }
 
 function logout() {

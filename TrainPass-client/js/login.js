@@ -1,7 +1,6 @@
-document.getElementById("btn-login-customer").addEventListener("click", loginCustomer);
-document.getElementById("btn-login-admin").addEventListener("click", loginAdmin);
+document.getElementById("btn-login").addEventListener("click", login);
 
-async function loginCustomer() {
+async function login() {
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
     const message = document.getElementById("message");
@@ -21,21 +20,8 @@ async function loginCustomer() {
 
         saveAuthData(response);
         window.location.href = "index.html";
-    } catch (error) {
-        message.innerText = getFriendlyError(error.message);
-    }
-}
-
-async function loginAdmin() {
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
-    const message = document.getElementById("message");
-
-    message.innerText = "";
-
-    if (email === "" || password === "") {
-        message.innerText = "Completează emailul și parola.";
         return;
+    } catch {
     }
 
     try {
@@ -46,15 +32,8 @@ async function loginAdmin() {
 
         saveAuthData(response);
         window.location.href = "index.html";
-    } catch (error) {
-        message.innerText = getFriendlyError(error.message);
+        return;
+    } catch {
+        message.innerText = "Emailul sau parola sunt greșite.";
     }
-}
-
-function getFriendlyError(text) {
-    if (!text) {
-        return "A apărut o eroare.";
-    }
-
-    return text;
 }

@@ -5,6 +5,7 @@ namespace TrainPass.Stations.Service
     public interface IQueryServiceStation
     {
         Task<GetAllStationsDto> GetAllStation();
-        Task<StationResponse> FindStationByNameCity(StationRequest request);
+
+        Task<StationResponse?> FindStationByNameCity(StationRequest request);
     }
 }

@@ -50,7 +50,7 @@
                 <div class="box-header">
                     <div>
                         <h2>Caută cursă</h2>
-                        <p>Alege ruta și data călătoriei.</p>
+                        <p>Alege unul sau mai multe filtre pentru a căuta curse.</p>
                     </div>
                 </div>
 
@@ -75,7 +75,7 @@
 
                 <div class="button-row">
                     <button id="btn-search">Caută</button>
-                    <button id="btn-clear-search" class="btn-light">Toate cursele</button>
+                    <button id="btn-clear-search" class="btn-light">Resetează căutarea</button>
                 </div>
 
                 <p id="search-message" class="message"></p>
@@ -103,23 +103,6 @@
 
                 <button id="btn-buy-ticket">Cumpără bilet</button>
                 <p id="ticket-message" class="message"></p>
-
-                <div id="ticket-card" class="ticket-card hidden">
-                    <div class="ticket-top">
-                        <h3>Bilet generat</h3>
-                        <span id="ticket-status" class="badge"></span>
-                    </div>
-
-                    <p><b>Cod bilet:</b> <span id="ticket-code"></span></p>
-                    <p><b>Cursă:</b> <span id="ticket-route"></span></p>
-                    <p><b>Data:</b> <span id="ticket-date"></span></p>
-                    <p><b>Loc:</b> <span id="ticket-seat-view"></span></p>
-
-                    <div class="button-row">
-                        <button id="btn-print-ticket" class="btn-light">Printează</button>
-                        <button id="btn-download-ticket" class="btn-light">Download</button>
-                    </div>
-                </div>
             </section>
         </div>
 
@@ -146,6 +129,12 @@
                     <tbody id="schedules-table"></tbody>
                 </table>
             </div>
+
+            <div class="pagination">
+                <button id="btn-prev-schedules" class="btn-light">Înapoi</button>
+                <span id="schedules-page-info">Pagina 1</span>
+                <button id="btn-next-schedules" class="btn-light">Înainte</button>
+            </div>
         </section>
 
         <section class="box">
@@ -157,7 +146,7 @@
             </div>
 
             <div class="table-wrapper">
-                <table>
+                <table id="my-tickets-table-full">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -306,7 +295,7 @@
             </section>
         </div>
 
-        <section class="box">
+        <section class="box full-width">
             <div class="box-header">
                 <div>
                     <h2>Curse</h2>

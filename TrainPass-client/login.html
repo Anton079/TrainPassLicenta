@@ -9,35 +9,50 @@
 </head>
 <body>
 
+<header class="auth-header">
+    <div class="auth-header-content">
+        <div class="auth-logo">
+            <div class="auth-logo-icon">T</div>
+            <div>
+                <h1>TrainPass</h1>
+                <p>Rezervare bilete de tren</p>
+            </div>
+        </div>
+    </div>
+</header>
+
 <main class="auth-page">
-    <section class="auth-info">
-        <h1>TrainPass</h1>
-        <p>Caută curse, cumpără bilete și gestionează călătoriile tale rapid.</p>
-    </section>
-
     <section class="auth-card">
-        <h2>Autentificare</h2>
-        <p>Alege tipul de cont și intră în aplicație.</p>
-
-        <label for="email">Email</label>
-        <input id="email" type="email" placeholder="exemplu@email.com">
-
-        <label for="password">Parolă</label>
-        <input id="password" type="password" placeholder="Parolă">
-
-        <div class="button-row">
-            <button id="btn-login-customer">Intră ca utilizator</button>
-            <button id="btn-login-admin" class="btn-dark">Intră ca administrator</button>
+        <div class="auth-info">
+            <h2>TrainPass</h2>
+            <p>Caută curse, cumpără bilete și gestionează călătoriile tale rapid.</p>
         </div>
 
-        <p id="message" class="message error"></p>
+        <div class="auth-form-box">
+            <h2>Autentificare</h2>
+            <p>Introdu datele contului pentru a intra în aplicație.</p>
 
-        <p class="auth-link">
-            Nu ai cont?
-            <a href="register.html">Creează cont</a>
-        </p>
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="exemplu@email.com">
+
+            <label for="password">Parolă</label>
+            <input id="password" type="password" placeholder="Parolă">
+
+            <button id="btn-login">Autentificare</button>
+
+            <p id="message" class="message error"></p>
+
+            <p class="auth-link">
+                Nu ai cont?
+                <a href="register.html">Creează cont</a>
+            </p>
+        </div>
     </section>
 </main>
+
+<footer class="auth-footer">
+    <p>TrainPass - Lucrare de licență</p>
+</footer>
 
 <script src="js/api.js"></script>
 <script src="js/login.js"></script>

@@ -13,12 +13,10 @@ namespace TrainPass.Stations.Models
 
         [Required]
         [Column("name")]
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
 
         [Required]
         [Column("city")]
-        public string City {  get; set; }
-
-
+        public string City { get; set; } = string.Empty;
     }
 }
