@@ -402,7 +402,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -411,30 +411,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IStationRepo.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Repository\\IStationRepo.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Stations\\Repository\\IStationRepo.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Repository\\IStationRepo.cs",
-              "RelativeToolTip": "TrainPass\\Stations\\Repository\\IStationRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T16:03:55.675Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "StationRepo.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Repository\\StationRepo.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Stations\\Repository\\StationRepo.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Repository\\StationRepo.cs",
-              "RelativeToolTip": "TrainPass\\Stations\\Repository\\StationRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T16:04:00.411Z"
             },
             {
               "$type": "Document",
@@ -468,10 +444,34 @@
               "RelativeDocumentMoniker": "TrainPass\\Tickets\\Repository\\TicketRepo.cs",
               "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Repository\\TicketRepo.cs",
               "RelativeToolTip": "TrainPass\\Tickets\\Repository\\TicketRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwCMAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-14T21:35:49.754Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StationRepo.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Repository\\StationRepo.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Stations\\Repository\\StationRepo.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Repository\\StationRepo.cs",
+              "RelativeToolTip": "TrainPass\\Stations\\Repository\\StationRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T16:04:00.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IStationRepo.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Repository\\IStationRepo.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Stations\\Repository\\IStationRepo.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Repository\\IStationRepo.cs",
+              "RelativeToolTip": "TrainPass\\Stations\\Repository\\IStationRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T16:03:55.675Z"
             },
             {
               "$type": "Document",
