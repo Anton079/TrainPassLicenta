@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
-using TrainPass.Admins.Dtos;
 using TrainPass.Customers.Dtos;
 using TrainPass.Data;
 using TrainPass.Stations.Dtos;

@@ -3,24 +3,100 @@
   "WorkspaceRootPath": "C:\\mycode\\facultate\\Licenta\\TrainPass\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\tickets\\service\\commandserviceticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\tickets\\service\\commandserviceticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\auth\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\auth\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\admins\\models\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\admins\\models\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\auth\\services\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\auth\\services\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\auth\\services\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\auth\\services\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\data\\migrations\\initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\data\\migrations\\initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\trainpass.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\trainpass.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\tickets\\repository\\ticketrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\tickets\\repository\\ticketrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\trains\\service\\icommandservicetrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\trains\\service\\icommandservicetrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\trains\\service\\commandservicetrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\trains\\service\\commandservicetrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\stations\\exceptions\\stationnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\stations\\exceptions\\stationnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\stations\\repository\\stationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\stations\\repository\\stationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\stations\\exceptions\\stationalreadyexistexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\stations\\exceptions\\stationalreadyexistexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\stations\\repository\\istationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\stations\\repository\\istationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\stations\\service\\icommandservicestation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\stations\\service\\icommandservicestation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\stations\\service\\queryservicestation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\stations\\service\\queryservicestation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\tickets\\service\\icommandserviceticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\tickets\\service\\icommandserviceticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\tickets\\service\\commandserviceticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\tickets\\service\\commandserviceticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\tickets\\mappings\\mappingprofiletickets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\tickets\\mappings\\mappingprofiletickets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\tickets\\exceptions\\noavailableseatsexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\tickets\\exceptions\\noavailableseatsexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\tickets\\exceptions\\seatalreadytakenexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\tickets\\exceptions\\seatalreadytakenexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\tickets\\dtos\\buyticketsrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\tickets\\dtos\\buyticketsrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\tickets\\dtos\\availableseatsresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\tickets\\dtos\\availableseatsresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\admins\\models\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\admins\\models\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\trainpass.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\trainpass.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -29,10 +105,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\tickets\\controllers\\controllerticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\tickets\\controllers\\controllerticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\tickets\\service\\icommandserviceticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\tickets\\service\\icommandserviceticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\tickets\\service\\queryserviceticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,18 +123,6 @@
       "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\tickets\\dtos\\ticketrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\tickets\\dtos\\buyticketsrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\tickets\\dtos\\buyticketsrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\tickets\\dtos\\availableseatsresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\tickets\\dtos\\availableseatsresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\stations\\repository\\stationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\stations\\repository\\stationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\stations\\models\\station.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\stations\\models\\station.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -73,18 +133,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\stations\\service\\iqueryservicestation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\stations\\service\\iqueryservicestation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\stations\\service\\queryservicestation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\stations\\service\\queryservicestation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\stations\\service\\icommandservicestation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\stations\\service\\icommandservicestation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\stations\\repository\\istationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\stations\\repository\\istationrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\customers\\controllers\\controllercustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -215,18 +263,6 @@
       "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\trains\\service\\iqueryservicetrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\trains\\service\\commandservicetrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\trains\\service\\commandservicetrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\trains\\service\\icommandservicetrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\trains\\service\\icommandservicetrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\tickets\\mappings\\mappingprofiletickets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\tickets\\mappings\\mappingprofiletickets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\trainschedules\\models\\trainschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\trainschedules\\models\\trainschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -251,20 +287,12 @@
       "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\trainschedules\\exceptions\\trainschedulenotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\tickets\\exceptions\\seatalreadytakenexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\tickets\\exceptions\\seatalreadytakenexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\tickets\\exceptions\\ticketnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\tickets\\exceptions\\ticketnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\tickets\\exceptions\\trainschedulenotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\tickets\\exceptions\\trainschedulenotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\tickets\\exceptions\\noavailableseatsexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\tickets\\exceptions\\noavailableseatsexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\customers\\services\\queryservicecustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -299,14 +327,6 @@
       "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\trainpass.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\stations\\exceptions\\stationalreadyexistexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\stations\\exceptions\\stationalreadyexistexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\stations\\exceptions\\stationnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\stations\\exceptions\\stationnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\stations\\dtos\\stationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\stations\\dtos\\stationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -319,14 +339,6 @@
       "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\customers\\services\\iqueryservicecustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\auth\\services\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\auth\\services\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\auth\\services\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\auth\\services\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\auth\\dto\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\auth\\dto\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -337,18 +349,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\auth\\dto\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\auth\\dto\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\auth\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\auth\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\data\\migrations\\initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|solutionrelative:trainpass\\data\\migrations\\initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2BB0ED73-C87C-4A61-A341-9EA18AD91030}|TrainPass\\TrainPass.csproj|c:\\mycode\\facultate\\licenta\\trainpass\\trainpass\\auth\\services\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -370,7 +370,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -382,262 +382,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Admin.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Admins\\Models\\Admin.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Admins\\Models\\Admin.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Admins\\Models\\Admin.cs",
-              "RelativeToolTip": "TrainPass\\Admins\\Models\\Admin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T23:15:28.599Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Program.cs",
               "RelativeDocumentMoniker": "TrainPass\\Program.cs",
               "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Program.cs",
               "RelativeToolTip": "TrainPass\\Program.cs",
-              "ViewState": "AgIAALUAAAAAAAAAAAAYwNMAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAB0AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-11T23:14:29.098Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ITicketRepo.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Repository\\ITicketRepo.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Repository\\ITicketRepo.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Repository\\ITicketRepo.cs",
-              "RelativeToolTip": "TrainPass\\Tickets\\Repository\\ITicketRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T21:35:45.651Z"
+              "WhenOpened": "2026-06-11T23:14:29.098Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "BuyTicketsRequest.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\BuyTicketsRequest.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Dtos\\BuyTicketsRequest.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\BuyTicketsRequest.cs",
-              "RelativeToolTip": "TrainPass\\Tickets\\Dtos\\BuyTicketsRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T21:35:34.666Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "QueryServiceStation.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Service\\QueryServiceStation.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Stations\\Service\\QueryServiceStation.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Service\\QueryServiceStation.cs",
-              "RelativeToolTip": "TrainPass\\Stations\\Service\\QueryServiceStation.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T17:14:21.845Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CommandServiceTicket.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Service\\CommandServiceTicket.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Service\\CommandServiceTicket.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Service\\CommandServiceTicket.cs",
-              "RelativeToolTip": "TrainPass\\Tickets\\Service\\CommandServiceTicket.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T21:36:29.27Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "TicketRequest.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\TicketRequest.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Dtos\\TicketRequest.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\TicketRequest.cs",
-              "RelativeToolTip": "TrainPass\\Tickets\\Dtos\\TicketRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T21:01:22.119Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ControllerTicket.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Controllers\\ControllerTicket.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Controllers\\ControllerTicket.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Controllers\\ControllerTicket.cs",
-              "RelativeToolTip": "TrainPass\\Tickets\\Controllers\\ControllerTicket.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T22:08:37.714Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ICommandServiceTicket.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Service\\ICommandServiceTicket.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Service\\ICommandServiceTicket.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Service\\ICommandServiceTicket.cs",
-              "RelativeToolTip": "TrainPass\\Tickets\\Service\\ICommandServiceTicket.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T21:36:22.118Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IQueryServiceTicket.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Service\\IQueryServiceTicket.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Service\\IQueryServiceTicket.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Service\\IQueryServiceTicket.cs",
-              "RelativeToolTip": "TrainPass\\Tickets\\Service\\IQueryServiceTicket.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T21:36:40.263Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "QueryServiceTicket.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Service\\QueryServiceTicket.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Service\\QueryServiceTicket.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Service\\QueryServiceTicket.cs",
-              "RelativeToolTip": "TrainPass\\Tickets\\Service\\QueryServiceTicket.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T21:36:49.424Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "MappingProfileStation.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Mapping\\MappingProfileStation.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Stations\\Mapping\\MappingProfileStation.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Mapping\\MappingProfileStation.cs",
-              "RelativeToolTip": "TrainPass\\Stations\\Mapping\\MappingProfileStation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T17:09:03.573Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TrainPass.csproj",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainPass.csproj",
-              "RelativeDocumentMoniker": "TrainPass\\TrainPass.csproj",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainPass.csproj",
-              "RelativeToolTip": "TrainPass\\TrainPass.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-06-09T17:02:58.225Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\appsettings.json",
-              "RelativeDocumentMoniker": "TrainPass\\appsettings.json",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\appsettings.json",
-              "RelativeToolTip": "TrainPass\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-12T16:21:20.33Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TicketRepo.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Repository\\TicketRepo.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Repository\\TicketRepo.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Repository\\TicketRepo.cs",
-              "RelativeToolTip": "TrainPass\\Tickets\\Repository\\TicketRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T21:35:49.754Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Station.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Models\\Station.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Stations\\Models\\Station.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Models\\Station.cs",
-              "RelativeToolTip": "TrainPass\\Stations\\Models\\Station.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-09T17:03:31.049Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AvailableSeatsResponse.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\AvailableSeatsResponse.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Dtos\\AvailableSeatsResponse.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\AvailableSeatsResponse.cs",
-              "RelativeToolTip": "TrainPass\\Tickets\\Dtos\\AvailableSeatsResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-16T01:40:37.208Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ControllerStation.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Controllers\\ControllerStation.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Stations\\Controllers\\ControllerStation.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Controllers\\ControllerStation.cs",
-              "RelativeToolTip": "TrainPass\\Stations\\Controllers\\ControllerStation.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAcwCAAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T16:01:28.461Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ICommandServiceStation.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Service\\ICommandServiceStation.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Stations\\Service\\ICommandServiceStation.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Service\\ICommandServiceStation.cs",
-              "RelativeToolTip": "TrainPass\\Stations\\Service\\ICommandServiceStation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T16:45:20.115Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "IQueryServiceStation.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Service\\IQueryServiceStation.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Stations\\Service\\IQueryServiceStation.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Service\\IQueryServiceStation.cs",
-              "RelativeToolTip": "TrainPass\\Stations\\Service\\IQueryServiceStation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T17:14:11.694Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "TrainNotFoundException.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Exceptions\\TrainNotFoundException.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Trains\\Exceptions\\TrainNotFoundException.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Exceptions\\TrainNotFoundException.cs",
-              "RelativeToolTip": "TrainPass\\Trains\\Exceptions\\TrainNotFoundException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T02:39:18.597Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
               "Title": "IStationRepo.cs",
               "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Repository\\IStationRepo.cs",
               "RelativeDocumentMoniker": "TrainPass\\Stations\\Repository\\IStationRepo.cs",
@@ -649,631 +406,128 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ICommandServiceStation.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Service\\ICommandServiceStation.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Stations\\Service\\ICommandServiceStation.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Service\\ICommandServiceStation.cs",
+              "RelativeToolTip": "TrainPass\\Stations\\Service\\ICommandServiceStation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T16:45:20.115Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "StationRepo.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Repository\\StationRepo.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Stations\\Repository\\StationRepo.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Repository\\StationRepo.cs",
-              "RelativeToolTip": "TrainPass\\Stations\\Repository\\StationRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Title": "QueryServiceStation.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Service\\QueryServiceStation.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Stations\\Service\\QueryServiceStation.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Service\\QueryServiceStation.cs",
+              "RelativeToolTip": "TrainPass\\Stations\\Service\\QueryServiceStation.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T16:04:00.411Z"
+              "WhenOpened": "2026-06-14T17:14:21.845Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "CommandServiceStation.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Service\\CommandServiceStation.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Stations\\Service\\CommandServiceStation.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Service\\CommandServiceStation.cs",
-              "RelativeToolTip": "TrainPass\\Stations\\Service\\CommandServiceStation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T16:45:43.304Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ControllerCustomer.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Controllers\\ControllerCustomer.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Customers\\Controllers\\ControllerCustomer.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Controllers\\ControllerCustomer.cs",
-              "RelativeToolTip": "TrainPass\\Customers\\Controllers\\ControllerCustomer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T18:59:29.204Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "GetAllStationsDto.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Dtos\\GetAllStationsDto.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Stations\\Dtos\\GetAllStationsDto.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Dtos\\GetAllStationsDto.cs",
-              "RelativeToolTip": "TrainPass\\Stations\\Dtos\\GetAllStationsDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T17:16:22.342Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "ITrainRepo.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Repository\\ITrainRepo.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Trains\\Repository\\ITrainRepo.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Repository\\ITrainRepo.cs",
-              "RelativeToolTip": "TrainPass\\Trains\\Repository\\ITrainRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T20:45:46.747Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "ControllerTrain.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Controllers\\ControllerTrain.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Trains\\Controllers\\ControllerTrain.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Controllers\\ControllerTrain.cs",
-              "RelativeToolTip": "TrainPass\\Trains\\Controllers\\ControllerTrain.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T02:33:54.082Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Train.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Models\\Train.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Trains\\Models\\Train.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Models\\Train.cs",
-              "RelativeToolTip": "TrainPass\\Trains\\Models\\Train.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAYwBYAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-11T23:18:57.121Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "TrainRepo.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Repository\\TrainRepo.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Trains\\Repository\\TrainRepo.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Repository\\TrainRepo.cs",
-              "RelativeToolTip": "TrainPass\\Trains\\Repository\\TrainRepo.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwA8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T20:45:49.614Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "CustomerRepo.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Repository\\CustomerRepo.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Customers\\Repository\\CustomerRepo.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Repository\\CustomerRepo.cs",
-              "RelativeToolTip": "TrainPass\\Customers\\Repository\\CustomerRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T18:29:28.778Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Models\\Customer.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Customers\\Models\\Customer.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Models\\Customer.cs",
-              "RelativeToolTip": "TrainPass\\Customers\\Models\\Customer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-10T01:20:26.047Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "MappingProfileCustomer.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Mappings\\MappingProfileCustomer.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Customers\\Mappings\\MappingProfileCustomer.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Mappings\\MappingProfileCustomer.cs",
-              "RelativeToolTip": "TrainPass\\Customers\\Mappings\\MappingProfileCustomer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T18:22:44.283Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "MappingProfileTrain.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Mappings\\MappingProfileTrain.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Trains\\Mappings\\MappingProfileTrain.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Mappings\\MappingProfileTrain.cs",
-              "RelativeToolTip": "TrainPass\\Trains\\Mappings\\MappingProfileTrain.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T20:38:06.405Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "SeatCombinationDto.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\SeatCombinationDto.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Dtos\\SeatCombinationDto.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\SeatCombinationDto.cs",
-              "RelativeToolTip": "TrainPass\\Tickets\\Dtos\\SeatCombinationDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T21:35:45.391Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "SeatsInfoDto.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\SeatsInfoDto.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Dtos\\SeatsInfoDto.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\SeatsInfoDto.cs",
-              "RelativeToolTip": "TrainPass\\Tickets\\Dtos\\SeatsInfoDto.cs",
+              "DocumentIndex": 15,
+              "Title": "ICommandServiceTicket.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Service\\ICommandServiceTicket.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Service\\ICommandServiceTicket.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Service\\ICommandServiceTicket.cs",
+              "RelativeToolTip": "TrainPass\\Tickets\\Service\\ICommandServiceTicket.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T21:36:01.549Z"
+              "WhenOpened": "2026-06-14T21:36:22.118Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "TrainScheduleRepo.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Repository\\TrainScheduleRepo.cs",
-              "RelativeDocumentMoniker": "TrainPass\\TrainSchedules\\Repository\\TrainScheduleRepo.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Repository\\TrainScheduleRepo.cs",
-              "RelativeToolTip": "TrainPass\\TrainSchedules\\Repository\\TrainScheduleRepo.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAmwFMAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 16,
+              "Title": "CommandServiceTicket.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Service\\CommandServiceTicket.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Service\\CommandServiceTicket.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Service\\CommandServiceTicket.cs",
+              "RelativeToolTip": "TrainPass\\Tickets\\Service\\CommandServiceTicket.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwA8AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T23:44:58.437Z"
+              "WhenOpened": "2026-06-14T21:36:29.27Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "CustomerRequest.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Dtos\\CustomerRequest.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Customers\\Dtos\\CustomerRequest.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Dtos\\CustomerRequest.cs",
-              "RelativeToolTip": "TrainPass\\Customers\\Dtos\\CustomerRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "TrainPass\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T18:10:50.534Z"
+              "WhenOpened": "2026-06-10T01:15:35.706Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "CustomerResponse.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Dtos\\CustomerResponse.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Customers\\Dtos\\CustomerResponse.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Dtos\\CustomerResponse.cs",
-              "RelativeToolTip": "TrainPass\\Customers\\Dtos\\CustomerResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "InitialCreate.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Data\\Migrations\\InitialCreate.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Data\\Migrations\\InitialCreate.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Data\\Migrations\\InitialCreate.cs",
+              "RelativeToolTip": "TrainPass\\Data\\Migrations\\InitialCreate.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAD8AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T18:10:58.256Z"
+              "WhenOpened": "2026-06-10T01:18:02.375Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "CustomerUpdateRequest.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Dtos\\CustomerUpdateRequest.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Customers\\Dtos\\CustomerUpdateRequest.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Dtos\\CustomerUpdateRequest.cs",
-              "RelativeToolTip": "TrainPass\\Customers\\Dtos\\CustomerUpdateRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Auth\\Services\\AuthController.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Auth\\Services\\AuthController.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Auth\\Services\\AuthController.cs",
+              "RelativeToolTip": "TrainPass\\Auth\\Services\\AuthController.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAAAI8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T18:11:22.937Z"
+              "WhenOpened": "2026-06-13T20:18:49.716Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "GetAllCustomersDto.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Dtos\\GetAllCustomersDto.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Customers\\Dtos\\GetAllCustomersDto.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Dtos\\GetAllCustomersDto.cs",
-              "RelativeToolTip": "TrainPass\\Customers\\Dtos\\GetAllCustomersDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Auth\\Services\\JwtService.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Auth\\Services\\JwtService.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Auth\\Services\\JwtService.cs",
+              "RelativeToolTip": "TrainPass\\Auth\\Services\\JwtService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T18:28:31.641Z"
+              "WhenOpened": "2026-06-10T01:25:18.404Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "CustomerNotFoundException.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Exceptions\\CustomerNotFoundException.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Customers\\Exceptions\\CustomerNotFoundException.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Exceptions\\CustomerNotFoundException.cs",
-              "RelativeToolTip": "TrainPass\\Customers\\Exceptions\\CustomerNotFoundException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T18:40:52.897Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "IQueryServiceTrainSchedule.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Service\\IQueryServiceTrainSchedule.cs",
-              "RelativeDocumentMoniker": "TrainPass\\TrainSchedules\\Service\\IQueryServiceTrainSchedule.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Service\\IQueryServiceTrainSchedule.cs",
-              "RelativeToolTip": "TrainPass\\TrainSchedules\\Service\\IQueryServiceTrainSchedule.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T02:44:33.466Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "ControllerTrainSchedule.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Controllers\\ControllerTrainSchedule.cs",
-              "RelativeDocumentMoniker": "TrainPass\\TrainSchedules\\Controllers\\ControllerTrainSchedule.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Controllers\\ControllerTrainSchedule.cs",
-              "RelativeToolTip": "TrainPass\\TrainSchedules\\Controllers\\ControllerTrainSchedule.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T02:46:50.173Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "CommandServiceTrainSchedule.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Service\\CommandServiceTrainSchedule.cs",
-              "RelativeDocumentMoniker": "TrainPass\\TrainSchedules\\Service\\CommandServiceTrainSchedule.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Service\\CommandServiceTrainSchedule.cs",
-              "RelativeToolTip": "TrainPass\\TrainSchedules\\Service\\CommandServiceTrainSchedule.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAmwB0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T02:46:19.754Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "QueryServiceTrainSchedule.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Service\\QueryServiceTrainSchedule.cs",
-              "RelativeDocumentMoniker": "TrainPass\\TrainSchedules\\Service\\QueryServiceTrainSchedule.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Service\\QueryServiceTrainSchedule.cs",
-              "RelativeToolTip": "TrainPass\\TrainSchedules\\Service\\QueryServiceTrainSchedule.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAmwBsAAACAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T02:45:05.199Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "ICommandServiceTrainSchedule.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Service\\ICommandServiceTrainSchedule.cs",
-              "RelativeDocumentMoniker": "TrainPass\\TrainSchedules\\Service\\ICommandServiceTrainSchedule.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Service\\ICommandServiceTrainSchedule.cs",
-              "RelativeToolTip": "TrainPass\\TrainSchedules\\Service\\ICommandServiceTrainSchedule.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-15T02:44:55.636Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "ITrainScheduleRepo.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Repository\\ITrainScheduleRepo.cs",
-              "RelativeDocumentMoniker": "TrainPass\\TrainSchedules\\Repository\\ITrainScheduleRepo.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Repository\\ITrainScheduleRepo.cs",
-              "RelativeToolTip": "TrainPass\\TrainSchedules\\Repository\\ITrainScheduleRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T23:44:53.361Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "ICustomerRepo.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Repository\\ICustomerRepo.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Customers\\Repository\\ICustomerRepo.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Repository\\ICustomerRepo.cs",
-              "RelativeToolTip": "TrainPass\\Customers\\Repository\\ICustomerRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T18:29:25.121Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "MappingProfileTrainSchedule.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Mappings\\MappingProfileTrainSchedule.cs",
-              "RelativeDocumentMoniker": "TrainPass\\TrainSchedules\\Mappings\\MappingProfileTrainSchedule.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Mappings\\MappingProfileTrainSchedule.cs",
-              "RelativeToolTip": "TrainPass\\TrainSchedules\\Mappings\\MappingProfileTrainSchedule.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T23:37:26.609Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "IQueryServiceTrain.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Service\\IQueryServiceTrain.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Trains\\Service\\IQueryServiceTrain.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Service\\IQueryServiceTrain.cs",
-              "RelativeToolTip": "TrainPass\\Trains\\Service\\IQueryServiceTrain.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T20:45:27.421Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "CommandServiceTrain.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Service\\CommandServiceTrain.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Trains\\Service\\CommandServiceTrain.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Service\\CommandServiceTrain.cs",
-              "RelativeToolTip": "TrainPass\\Trains\\Service\\CommandServiceTrain.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T20:45:21.81Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "ICommandServiceTrain.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Service\\ICommandServiceTrain.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Trains\\Service\\ICommandServiceTrain.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Service\\ICommandServiceTrain.cs",
-              "RelativeToolTip": "TrainPass\\Trains\\Service\\ICommandServiceTrain.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T20:45:16.718Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "ExceptionsMessage.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\System\\ExceptionsMessage.cs",
-              "RelativeDocumentMoniker": "TrainPass\\System\\ExceptionsMessage.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\System\\ExceptionsMessage.cs",
-              "RelativeToolTip": "TrainPass\\System\\ExceptionsMessage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T18:37:01.883Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "QueryServiceTrain.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Service\\QueryServiceTrain.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Trains\\Service\\QueryServiceTrain.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Service\\QueryServiceTrain.cs",
-              "RelativeToolTip": "TrainPass\\Trains\\Service\\QueryServiceTrain.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T20:45:32.722Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "MappingProfileTickets.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Mappings\\MappingProfileTickets.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Mappings\\MappingProfileTickets.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Mappings\\MappingProfileTickets.cs",
-              "RelativeToolTip": "TrainPass\\Tickets\\Mappings\\MappingProfileTickets.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T21:02:37.086Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "Ticket.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Models\\Ticket.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Models\\Ticket.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Models\\Ticket.cs",
-              "RelativeToolTip": "TrainPass\\Tickets\\Models\\Ticket.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-09T17:03:24.52Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "TrainSchedule.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Models\\TrainSchedule.cs",
-              "RelativeDocumentMoniker": "TrainPass\\TrainSchedules\\Models\\TrainSchedule.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Models\\TrainSchedule.cs",
-              "RelativeToolTip": "TrainPass\\TrainSchedules\\Models\\TrainSchedule.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T19:01:43.541Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
-              "Title": "TrainScheduleNotFoundException.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Exceptions\\TrainScheduleNotFoundException.cs",
-              "RelativeDocumentMoniker": "TrainPass\\TrainSchedules\\Exceptions\\TrainScheduleNotFoundException.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Exceptions\\TrainScheduleNotFoundException.cs",
-              "RelativeToolTip": "TrainPass\\TrainSchedules\\Exceptions\\TrainScheduleNotFoundException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T23:31:59.292Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "TrainScheduleResponse.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Dtos\\TrainScheduleResponse.cs",
-              "RelativeDocumentMoniker": "TrainPass\\TrainSchedules\\Dtos\\TrainScheduleResponse.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Dtos\\TrainScheduleResponse.cs",
-              "RelativeToolTip": "TrainPass\\TrainSchedules\\Dtos\\TrainScheduleResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T23:37:02.757Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 60,
-              "Title": "TrainScheduleRequest.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Dtos\\TrainScheduleRequest.cs",
-              "RelativeDocumentMoniker": "TrainPass\\TrainSchedules\\Dtos\\TrainScheduleRequest.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Dtos\\TrainScheduleRequest.cs",
-              "RelativeToolTip": "TrainPass\\TrainSchedules\\Dtos\\TrainScheduleRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T23:37:09.259Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "GetAllTrainSchedule.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Dtos\\GetAllTrainSchedule.cs",
-              "RelativeDocumentMoniker": "TrainPass\\TrainSchedules\\Dtos\\GetAllTrainSchedule.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Dtos\\GetAllTrainSchedule.cs",
-              "RelativeToolTip": "TrainPass\\TrainSchedules\\Dtos\\GetAllTrainSchedule.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T23:37:16.078Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 62,
-              "Title": "SeatAlreadyTakenException.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Exceptions\\SeatAlreadyTakenException.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Exceptions\\SeatAlreadyTakenException.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Exceptions\\SeatAlreadyTakenException.cs",
-              "RelativeToolTip": "TrainPass\\Tickets\\Exceptions\\SeatAlreadyTakenException.cs",
+              "DocumentIndex": 2,
+              "Title": "PasswordHasher.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Auth\\Services\\PasswordHasher.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Auth\\Services\\PasswordHasher.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Auth\\Services\\PasswordHasher.cs",
+              "RelativeToolTip": "TrainPass\\Auth\\Services\\PasswordHasher.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T23:17:05.321Z"
+              "WhenOpened": "2026-06-13T20:18:18.62Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
-              "Title": "TicketNotFoundException.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Exceptions\\TicketNotFoundException.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Exceptions\\TicketNotFoundException.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Exceptions\\TicketNotFoundException.cs",
-              "RelativeToolTip": "TrainPass\\Tickets\\Exceptions\\TicketNotFoundException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAABBAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "TicketRepo.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Repository\\TicketRepo.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Repository\\TicketRepo.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Repository\\TicketRepo.cs",
+              "RelativeToolTip": "TrainPass\\Tickets\\Repository\\TicketRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T23:20:43.994Z"
+              "WhenOpened": "2026-06-14T21:35:49.754Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
-              "Title": "TrainScheduleNotFoundException.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Exceptions\\TrainScheduleNotFoundException.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Exceptions\\TrainScheduleNotFoundException.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Exceptions\\TrainScheduleNotFoundException.cs",
-              "RelativeToolTip": "TrainPass\\Tickets\\Exceptions\\TrainScheduleNotFoundException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T23:17:51.048Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 65,
-              "Title": "NoAvailableSeatsException.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Exceptions\\NoAvailableSeatsException.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Exceptions\\NoAvailableSeatsException.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Exceptions\\NoAvailableSeatsException.cs",
-              "RelativeToolTip": "TrainPass\\Tickets\\Exceptions\\NoAvailableSeatsException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T23:18:27.091Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 67,
-              "Title": "GetAllTicketsDto.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\GetAllTicketsDto.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Dtos\\GetAllTicketsDto.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\GetAllTicketsDto.cs",
-              "RelativeToolTip": "TrainPass\\Tickets\\Dtos\\GetAllTicketsDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T20:57:54.354Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 66,
-              "Title": "QueryServiceCustomer.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Services\\QueryServiceCustomer.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Customers\\Services\\QueryServiceCustomer.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Services\\QueryServiceCustomer.cs",
-              "RelativeToolTip": "TrainPass\\Customers\\Services\\QueryServiceCustomer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T18:34:34.619Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 68,
-              "Title": "TicketResponse.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\TicketResponse.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Dtos\\TicketResponse.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\TicketResponse.cs",
-              "RelativeToolTip": "TrainPass\\Tickets\\Dtos\\TicketResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T21:01:16.114Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 71,
-              "Title": "GetAllTrainsDto.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Dtos\\GetAllTrainsDto.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Trains\\Dtos\\GetAllTrainsDto.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Dtos\\GetAllTrainsDto.cs",
-              "RelativeToolTip": "TrainPass\\Trains\\Dtos\\GetAllTrainsDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T19:58:48.736Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 69,
-              "Title": "TrainResponse.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Dtos\\TrainResponse.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Trains\\Dtos\\TrainResponse.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Dtos\\TrainResponse.cs",
-              "RelativeToolTip": "TrainPass\\Trains\\Dtos\\TrainResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T19:58:32.208Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 70,
-              "Title": "TrainRequest.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Dtos\\TrainRequest.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Trains\\Dtos\\TrainRequest.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Dtos\\TrainRequest.cs",
-              "RelativeToolTip": "TrainPass\\Trains\\Dtos\\TrainRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T19:58:26.401Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 73,
-              "Title": "TrainPass.http",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainPass.http",
-              "RelativeDocumentMoniker": "TrainPass\\TrainPass.http",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainPass.http",
-              "RelativeToolTip": "TrainPass\\TrainPass.http",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2026-06-12T02:20:36.593Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 72,
-              "Title": "StationResponse.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Dtos\\StationResponse.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Stations\\Dtos\\StationResponse.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Dtos\\StationResponse.cs",
-              "RelativeToolTip": "TrainPass\\Stations\\Dtos\\StationResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-14T15:51:23.74Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 11,
               "Title": "StationAlreadyExistException.cs",
               "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Exceptions\\StationAlreadyExistException.cs",
               "RelativeDocumentMoniker": "TrainPass\\Stations\\Exceptions\\StationAlreadyExistException.cs",
@@ -1285,7 +539,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 10,
+              "Title": "StationRepo.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Repository\\StationRepo.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Stations\\Repository\\StationRepo.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Repository\\StationRepo.cs",
+              "RelativeToolTip": "TrainPass\\Stations\\Repository\\StationRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T16:04:00.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "StationNotFoundException.cs",
               "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Exceptions\\StationNotFoundException.cs",
               "RelativeDocumentMoniker": "TrainPass\\Stations\\Exceptions\\StationNotFoundException.cs",
@@ -1297,7 +563,799 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ICommandServiceTrain.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Service\\ICommandServiceTrain.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Trains\\Service\\ICommandServiceTrain.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Service\\ICommandServiceTrain.cs",
+              "RelativeToolTip": "TrainPass\\Trains\\Service\\ICommandServiceTrain.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T20:45:16.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CommandServiceTrain.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Service\\CommandServiceTrain.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Trains\\Service\\CommandServiceTrain.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Service\\CommandServiceTrain.cs",
+              "RelativeToolTip": "TrainPass\\Trains\\Service\\CommandServiceTrain.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T20:45:21.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MappingProfileTickets.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Mappings\\MappingProfileTickets.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Mappings\\MappingProfileTickets.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Mappings\\MappingProfileTickets.cs",
+              "RelativeToolTip": "TrainPass\\Tickets\\Mappings\\MappingProfileTickets.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T21:02:37.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "NoAvailableSeatsException.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Exceptions\\NoAvailableSeatsException.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Exceptions\\NoAvailableSeatsException.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Exceptions\\NoAvailableSeatsException.cs",
+              "RelativeToolTip": "TrainPass\\Tickets\\Exceptions\\NoAvailableSeatsException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T23:18:27.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "SeatAlreadyTakenException.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Exceptions\\SeatAlreadyTakenException.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Exceptions\\SeatAlreadyTakenException.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Exceptions\\SeatAlreadyTakenException.cs",
+              "RelativeToolTip": "TrainPass\\Tickets\\Exceptions\\SeatAlreadyTakenException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T23:17:05.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "BuyTicketsRequest.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\BuyTicketsRequest.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Dtos\\BuyTicketsRequest.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\BuyTicketsRequest.cs",
+              "RelativeToolTip": "TrainPass\\Tickets\\Dtos\\BuyTicketsRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-15T21:35:34.666Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AvailableSeatsResponse.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\AvailableSeatsResponse.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Dtos\\AvailableSeatsResponse.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\AvailableSeatsResponse.cs",
+              "RelativeToolTip": "TrainPass\\Tickets\\Dtos\\AvailableSeatsResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T01:40:37.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ITicketRepo.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Repository\\ITicketRepo.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Repository\\ITicketRepo.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Repository\\ITicketRepo.cs",
+              "RelativeToolTip": "TrainPass\\Tickets\\Repository\\ITicketRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T21:35:45.651Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Admin.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Admins\\Models\\Admin.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Admins\\Models\\Admin.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Admins\\Models\\Admin.cs",
+              "RelativeToolTip": "TrainPass\\Admins\\Models\\Admin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T23:15:28.599Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "TicketRequest.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\TicketRequest.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Dtos\\TicketRequest.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\TicketRequest.cs",
+              "RelativeToolTip": "TrainPass\\Tickets\\Dtos\\TicketRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T21:01:22.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ControllerTicket.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Controllers\\ControllerTicket.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Controllers\\ControllerTicket.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Controllers\\ControllerTicket.cs",
+              "RelativeToolTip": "TrainPass\\Tickets\\Controllers\\ControllerTicket.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T22:08:37.714Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "IQueryServiceTicket.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Service\\IQueryServiceTicket.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Service\\IQueryServiceTicket.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Service\\IQueryServiceTicket.cs",
+              "RelativeToolTip": "TrainPass\\Tickets\\Service\\IQueryServiceTicket.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T21:36:40.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "QueryServiceTicket.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Service\\QueryServiceTicket.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Service\\QueryServiceTicket.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Service\\QueryServiceTicket.cs",
+              "RelativeToolTip": "TrainPass\\Tickets\\Service\\QueryServiceTicket.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T21:36:49.424Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "MappingProfileStation.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Mapping\\MappingProfileStation.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Stations\\Mapping\\MappingProfileStation.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Mapping\\MappingProfileStation.cs",
+              "RelativeToolTip": "TrainPass\\Stations\\Mapping\\MappingProfileStation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T17:09:03.573Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "TrainPass.csproj",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainPass.csproj",
+              "RelativeDocumentMoniker": "TrainPass\\TrainPass.csproj",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainPass.csproj",
+              "RelativeToolTip": "TrainPass\\TrainPass.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-09T17:02:58.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\appsettings.json",
+              "RelativeDocumentMoniker": "TrainPass\\appsettings.json",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\appsettings.json",
+              "RelativeToolTip": "TrainPass\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-12T16:21:20.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Station.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Models\\Station.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Stations\\Models\\Station.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Models\\Station.cs",
+              "RelativeToolTip": "TrainPass\\Stations\\Models\\Station.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T17:03:31.049Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ControllerStation.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Controllers\\ControllerStation.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Stations\\Controllers\\ControllerStation.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Controllers\\ControllerStation.cs",
+              "RelativeToolTip": "TrainPass\\Stations\\Controllers\\ControllerStation.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAcwCAAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T16:01:28.461Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "IQueryServiceStation.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Service\\IQueryServiceStation.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Stations\\Service\\IQueryServiceStation.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Service\\IQueryServiceStation.cs",
+              "RelativeToolTip": "TrainPass\\Stations\\Service\\IQueryServiceStation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T17:14:11.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "TrainNotFoundException.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Exceptions\\TrainNotFoundException.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Trains\\Exceptions\\TrainNotFoundException.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Exceptions\\TrainNotFoundException.cs",
+              "RelativeToolTip": "TrainPass\\Trains\\Exceptions\\TrainNotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-15T02:39:18.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "CommandServiceStation.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Service\\CommandServiceStation.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Stations\\Service\\CommandServiceStation.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Service\\CommandServiceStation.cs",
+              "RelativeToolTip": "TrainPass\\Stations\\Service\\CommandServiceStation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T16:45:43.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ControllerCustomer.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Controllers\\ControllerCustomer.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Customers\\Controllers\\ControllerCustomer.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Controllers\\ControllerCustomer.cs",
+              "RelativeToolTip": "TrainPass\\Customers\\Controllers\\ControllerCustomer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T18:59:29.204Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "GetAllStationsDto.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Dtos\\GetAllStationsDto.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Stations\\Dtos\\GetAllStationsDto.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Dtos\\GetAllStationsDto.cs",
+              "RelativeToolTip": "TrainPass\\Stations\\Dtos\\GetAllStationsDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T17:16:22.342Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "ITrainRepo.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Repository\\ITrainRepo.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Trains\\Repository\\ITrainRepo.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Repository\\ITrainRepo.cs",
+              "RelativeToolTip": "TrainPass\\Trains\\Repository\\ITrainRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T20:45:46.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "ControllerTrain.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Controllers\\ControllerTrain.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Trains\\Controllers\\ControllerTrain.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Controllers\\ControllerTrain.cs",
+              "RelativeToolTip": "TrainPass\\Trains\\Controllers\\ControllerTrain.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-15T02:33:54.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Train.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Models\\Train.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Trains\\Models\\Train.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Models\\Train.cs",
+              "RelativeToolTip": "TrainPass\\Trains\\Models\\Train.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAYwBYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-11T23:18:57.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "TrainRepo.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Repository\\TrainRepo.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Trains\\Repository\\TrainRepo.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Repository\\TrainRepo.cs",
+              "RelativeToolTip": "TrainPass\\Trains\\Repository\\TrainRepo.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T20:45:49.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "CustomerRepo.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Repository\\CustomerRepo.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Customers\\Repository\\CustomerRepo.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Repository\\CustomerRepo.cs",
+              "RelativeToolTip": "TrainPass\\Customers\\Repository\\CustomerRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T18:29:28.778Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Customers\\Models\\Customer.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Models\\Customer.cs",
+              "RelativeToolTip": "TrainPass\\Customers\\Models\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-10T01:20:26.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "MappingProfileCustomer.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Mappings\\MappingProfileCustomer.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Customers\\Mappings\\MappingProfileCustomer.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Mappings\\MappingProfileCustomer.cs",
+              "RelativeToolTip": "TrainPass\\Customers\\Mappings\\MappingProfileCustomer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T18:22:44.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "MappingProfileTrain.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Mappings\\MappingProfileTrain.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Trains\\Mappings\\MappingProfileTrain.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Mappings\\MappingProfileTrain.cs",
+              "RelativeToolTip": "TrainPass\\Trains\\Mappings\\MappingProfileTrain.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T20:38:06.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "SeatCombinationDto.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\SeatCombinationDto.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Dtos\\SeatCombinationDto.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\SeatCombinationDto.cs",
+              "RelativeToolTip": "TrainPass\\Tickets\\Dtos\\SeatCombinationDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-15T21:35:45.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "SeatsInfoDto.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\SeatsInfoDto.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Dtos\\SeatsInfoDto.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\SeatsInfoDto.cs",
+              "RelativeToolTip": "TrainPass\\Tickets\\Dtos\\SeatsInfoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-15T21:36:01.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "TrainScheduleRepo.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Repository\\TrainScheduleRepo.cs",
+              "RelativeDocumentMoniker": "TrainPass\\TrainSchedules\\Repository\\TrainScheduleRepo.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Repository\\TrainScheduleRepo.cs",
+              "RelativeToolTip": "TrainPass\\TrainSchedules\\Repository\\TrainScheduleRepo.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAmwFMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T23:44:58.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "CustomerRequest.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Dtos\\CustomerRequest.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Customers\\Dtos\\CustomerRequest.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Dtos\\CustomerRequest.cs",
+              "RelativeToolTip": "TrainPass\\Customers\\Dtos\\CustomerRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T18:10:50.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "CustomerResponse.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Dtos\\CustomerResponse.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Customers\\Dtos\\CustomerResponse.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Dtos\\CustomerResponse.cs",
+              "RelativeToolTip": "TrainPass\\Customers\\Dtos\\CustomerResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T18:10:58.256Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "CustomerUpdateRequest.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Dtos\\CustomerUpdateRequest.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Customers\\Dtos\\CustomerUpdateRequest.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Dtos\\CustomerUpdateRequest.cs",
+              "RelativeToolTip": "TrainPass\\Customers\\Dtos\\CustomerUpdateRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T18:11:22.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "GetAllCustomersDto.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Dtos\\GetAllCustomersDto.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Customers\\Dtos\\GetAllCustomersDto.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Dtos\\GetAllCustomersDto.cs",
+              "RelativeToolTip": "TrainPass\\Customers\\Dtos\\GetAllCustomersDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T18:28:31.641Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "CustomerNotFoundException.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Exceptions\\CustomerNotFoundException.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Customers\\Exceptions\\CustomerNotFoundException.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Exceptions\\CustomerNotFoundException.cs",
+              "RelativeToolTip": "TrainPass\\Customers\\Exceptions\\CustomerNotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T18:40:52.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "IQueryServiceTrainSchedule.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Service\\IQueryServiceTrainSchedule.cs",
+              "RelativeDocumentMoniker": "TrainPass\\TrainSchedules\\Service\\IQueryServiceTrainSchedule.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Service\\IQueryServiceTrainSchedule.cs",
+              "RelativeToolTip": "TrainPass\\TrainSchedules\\Service\\IQueryServiceTrainSchedule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-15T02:44:33.466Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "ControllerTrainSchedule.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Controllers\\ControllerTrainSchedule.cs",
+              "RelativeDocumentMoniker": "TrainPass\\TrainSchedules\\Controllers\\ControllerTrainSchedule.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Controllers\\ControllerTrainSchedule.cs",
+              "RelativeToolTip": "TrainPass\\TrainSchedules\\Controllers\\ControllerTrainSchedule.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-15T02:46:50.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "CommandServiceTrainSchedule.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Service\\CommandServiceTrainSchedule.cs",
+              "RelativeDocumentMoniker": "TrainPass\\TrainSchedules\\Service\\CommandServiceTrainSchedule.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Service\\CommandServiceTrainSchedule.cs",
+              "RelativeToolTip": "TrainPass\\TrainSchedules\\Service\\CommandServiceTrainSchedule.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAmwB0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-15T02:46:19.754Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "QueryServiceTrainSchedule.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Service\\QueryServiceTrainSchedule.cs",
+              "RelativeDocumentMoniker": "TrainPass\\TrainSchedules\\Service\\QueryServiceTrainSchedule.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Service\\QueryServiceTrainSchedule.cs",
+              "RelativeToolTip": "TrainPass\\TrainSchedules\\Service\\QueryServiceTrainSchedule.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAmwBsAAACAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-15T02:45:05.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "ICommandServiceTrainSchedule.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Service\\ICommandServiceTrainSchedule.cs",
+              "RelativeDocumentMoniker": "TrainPass\\TrainSchedules\\Service\\ICommandServiceTrainSchedule.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Service\\ICommandServiceTrainSchedule.cs",
+              "RelativeToolTip": "TrainPass\\TrainSchedules\\Service\\ICommandServiceTrainSchedule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-15T02:44:55.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "ITrainScheduleRepo.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Repository\\ITrainScheduleRepo.cs",
+              "RelativeDocumentMoniker": "TrainPass\\TrainSchedules\\Repository\\ITrainScheduleRepo.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Repository\\ITrainScheduleRepo.cs",
+              "RelativeToolTip": "TrainPass\\TrainSchedules\\Repository\\ITrainScheduleRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T23:44:53.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "ICustomerRepo.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Repository\\ICustomerRepo.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Customers\\Repository\\ICustomerRepo.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Repository\\ICustomerRepo.cs",
+              "RelativeToolTip": "TrainPass\\Customers\\Repository\\ICustomerRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T18:29:25.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "MappingProfileTrainSchedule.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Mappings\\MappingProfileTrainSchedule.cs",
+              "RelativeDocumentMoniker": "TrainPass\\TrainSchedules\\Mappings\\MappingProfileTrainSchedule.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Mappings\\MappingProfileTrainSchedule.cs",
+              "RelativeToolTip": "TrainPass\\TrainSchedules\\Mappings\\MappingProfileTrainSchedule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T23:37:26.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "IQueryServiceTrain.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Service\\IQueryServiceTrain.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Trains\\Service\\IQueryServiceTrain.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Service\\IQueryServiceTrain.cs",
+              "RelativeToolTip": "TrainPass\\Trains\\Service\\IQueryServiceTrain.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T20:45:27.421Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "ExceptionsMessage.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\System\\ExceptionsMessage.cs",
+              "RelativeDocumentMoniker": "TrainPass\\System\\ExceptionsMessage.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\System\\ExceptionsMessage.cs",
+              "RelativeToolTip": "TrainPass\\System\\ExceptionsMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T18:37:01.883Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "QueryServiceTrain.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Service\\QueryServiceTrain.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Trains\\Service\\QueryServiceTrain.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Service\\QueryServiceTrain.cs",
+              "RelativeToolTip": "TrainPass\\Trains\\Service\\QueryServiceTrain.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T20:45:32.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "Ticket.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Models\\Ticket.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Models\\Ticket.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Models\\Ticket.cs",
+              "RelativeToolTip": "TrainPass\\Tickets\\Models\\Ticket.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T17:03:24.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "TrainSchedule.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Models\\TrainSchedule.cs",
+              "RelativeDocumentMoniker": "TrainPass\\TrainSchedules\\Models\\TrainSchedule.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Models\\TrainSchedule.cs",
+              "RelativeToolTip": "TrainPass\\TrainSchedules\\Models\\TrainSchedule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T19:01:43.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "TrainScheduleNotFoundException.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Exceptions\\TrainScheduleNotFoundException.cs",
+              "RelativeDocumentMoniker": "TrainPass\\TrainSchedules\\Exceptions\\TrainScheduleNotFoundException.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Exceptions\\TrainScheduleNotFoundException.cs",
+              "RelativeToolTip": "TrainPass\\TrainSchedules\\Exceptions\\TrainScheduleNotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T23:31:59.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "TrainScheduleResponse.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Dtos\\TrainScheduleResponse.cs",
+              "RelativeDocumentMoniker": "TrainPass\\TrainSchedules\\Dtos\\TrainScheduleResponse.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Dtos\\TrainScheduleResponse.cs",
+              "RelativeToolTip": "TrainPass\\TrainSchedules\\Dtos\\TrainScheduleResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T23:37:02.757Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "TrainScheduleRequest.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Dtos\\TrainScheduleRequest.cs",
+              "RelativeDocumentMoniker": "TrainPass\\TrainSchedules\\Dtos\\TrainScheduleRequest.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Dtos\\TrainScheduleRequest.cs",
+              "RelativeToolTip": "TrainPass\\TrainSchedules\\Dtos\\TrainScheduleRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T23:37:09.259Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "GetAllTrainSchedule.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Dtos\\GetAllTrainSchedule.cs",
+              "RelativeDocumentMoniker": "TrainPass\\TrainSchedules\\Dtos\\GetAllTrainSchedule.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainSchedules\\Dtos\\GetAllTrainSchedule.cs",
+              "RelativeToolTip": "TrainPass\\TrainSchedules\\Dtos\\GetAllTrainSchedule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T23:37:16.078Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "TicketNotFoundException.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Exceptions\\TicketNotFoundException.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Exceptions\\TicketNotFoundException.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Exceptions\\TicketNotFoundException.cs",
+              "RelativeToolTip": "TrainPass\\Tickets\\Exceptions\\TicketNotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T23:20:43.994Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "TrainScheduleNotFoundException.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Exceptions\\TrainScheduleNotFoundException.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Exceptions\\TrainScheduleNotFoundException.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Exceptions\\TrainScheduleNotFoundException.cs",
+              "RelativeToolTip": "TrainPass\\Tickets\\Exceptions\\TrainScheduleNotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T23:17:51.048Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "GetAllTicketsDto.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\GetAllTicketsDto.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Dtos\\GetAllTicketsDto.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\GetAllTicketsDto.cs",
+              "RelativeToolTip": "TrainPass\\Tickets\\Dtos\\GetAllTicketsDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T20:57:54.354Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "QueryServiceCustomer.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Services\\QueryServiceCustomer.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Customers\\Services\\QueryServiceCustomer.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Services\\QueryServiceCustomer.cs",
+              "RelativeToolTip": "TrainPass\\Customers\\Services\\QueryServiceCustomer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T18:34:34.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "TicketResponse.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\TicketResponse.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Tickets\\Dtos\\TicketResponse.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Tickets\\Dtos\\TicketResponse.cs",
+              "RelativeToolTip": "TrainPass\\Tickets\\Dtos\\TicketResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T21:01:16.114Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "GetAllTrainsDto.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Dtos\\GetAllTrainsDto.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Trains\\Dtos\\GetAllTrainsDto.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Dtos\\GetAllTrainsDto.cs",
+              "RelativeToolTip": "TrainPass\\Trains\\Dtos\\GetAllTrainsDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T19:58:48.736Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 76,
+              "Title": "TrainResponse.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Dtos\\TrainResponse.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Trains\\Dtos\\TrainResponse.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Dtos\\TrainResponse.cs",
+              "RelativeToolTip": "TrainPass\\Trains\\Dtos\\TrainResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T19:58:32.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "TrainRequest.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Dtos\\TrainRequest.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Trains\\Dtos\\TrainRequest.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Trains\\Dtos\\TrainRequest.cs",
+              "RelativeToolTip": "TrainPass\\Trains\\Dtos\\TrainRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T19:58:26.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "TrainPass.http",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainPass.http",
+              "RelativeDocumentMoniker": "TrainPass\\TrainPass.http",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\TrainPass.http",
+              "RelativeToolTip": "TrainPass\\TrainPass.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2026-06-12T02:20:36.593Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "StationResponse.cs",
+              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Dtos\\StationResponse.cs",
+              "RelativeDocumentMoniker": "TrainPass\\Stations\\Dtos\\StationResponse.cs",
+              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Dtos\\StationResponse.cs",
+              "RelativeToolTip": "TrainPass\\Stations\\Dtos\\StationResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T15:51:23.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
               "Title": "StationRequest.cs",
               "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Dtos\\StationRequest.cs",
               "RelativeDocumentMoniker": "TrainPass\\Stations\\Dtos\\StationRequest.cs",
@@ -1309,7 +1367,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 82,
               "Title": "StationUpdateRequest.cs",
               "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Stations\\Dtos\\StationUpdateRequest.cs",
               "RelativeDocumentMoniker": "TrainPass\\Stations\\Dtos\\StationUpdateRequest.cs",
@@ -1321,7 +1379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 83,
               "Title": "IQueryServiceCustomer.cs",
               "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Customers\\Services\\IQueryServiceCustomer.cs",
               "RelativeDocumentMoniker": "TrainPass\\Customers\\Services\\IQueryServiceCustomer.cs",
@@ -1334,18 +1392,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 86,
-              "Title": "InitialCreate.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Data\\Migrations\\InitialCreate.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Data\\Migrations\\InitialCreate.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Data\\Migrations\\InitialCreate.cs",
-              "RelativeToolTip": "TrainPass\\Data\\Migrations\\InitialCreate.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwD8AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-10T01:18:02.375Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 83,
               "Title": "RegisterRequest.cs",
               "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Auth\\DTO\\RegisterRequest.cs",
               "RelativeDocumentMoniker": "TrainPass\\Auth\\DTO\\RegisterRequest.cs",
@@ -1357,7 +1403,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 85,
               "Title": "LoginRequest.cs",
               "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Auth\\DTO\\LoginRequest.cs",
               "RelativeDocumentMoniker": "TrainPass\\Auth\\DTO\\LoginRequest.cs",
@@ -1369,43 +1415,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Data\\AppDbContext.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "TrainPass\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-10T01:15:35.706Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 84,
-              "Title": "JwtService.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Auth\\Services\\JwtService.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Auth\\Services\\JwtService.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Auth\\Services\\JwtService.cs",
-              "RelativeToolTip": "TrainPass\\Auth\\Services\\JwtService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-10T01:25:18.404Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 79,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Auth\\Services\\AuthController.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Auth\\Services\\AuthController.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Auth\\Services\\AuthController.cs",
-              "RelativeToolTip": "TrainPass\\Auth\\Services\\AuthController.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAowAcAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T20:18:49.716Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 81,
               "Title": "AuthResponse.cs",
               "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Auth\\DTO\\AuthResponse.cs",
               "RelativeDocumentMoniker": "TrainPass\\Auth\\DTO\\AuthResponse.cs",
@@ -1414,18 +1424,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-10T01:23:20.008Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 80,
-              "Title": "PasswordHasher.cs",
-              "DocumentMoniker": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Auth\\Services\\PasswordHasher.cs",
-              "RelativeDocumentMoniker": "TrainPass\\Auth\\Services\\PasswordHasher.cs",
-              "ToolTip": "C:\\mycode\\facultate\\Licenta\\TrainPass\\TrainPass\\Auth\\Services\\PasswordHasher.cs",
-              "RelativeToolTip": "TrainPass\\Auth\\Services\\PasswordHasher.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-13T20:18:18.62Z"
             },
             {
               "$type": "Document",

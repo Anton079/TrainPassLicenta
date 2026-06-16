@@ -134,9 +134,7 @@ namespace TrainPass.Auth.Controllers
                 .FirstOrDefaultAsync(admin => admin.Email == request.Email);
 
             if (admin == null)
-            {
                 return BadRequest("Invalid email or password.");
-            }
 
             if (string.IsNullOrWhiteSpace(admin.PasswordHash) ||
                 string.IsNullOrWhiteSpace(admin.PasswordSalt))
@@ -151,9 +149,7 @@ namespace TrainPass.Auth.Controllers
             );
 
             if (!passwordIsValid)
-            {
                 return BadRequest("Invalid email or password.");
-            }
 
             var token = _jwtService.GenerateAdminToken(admin);
 

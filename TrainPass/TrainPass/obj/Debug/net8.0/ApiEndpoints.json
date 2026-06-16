@@ -196,32 +196,6 @@
   },
   {
     "ContainingType": "TrainPass.Tickets.Controllers.ControllerTicket",
-    "Method": "BuyTicket",
-    "RelativePath": "api/v1/tickets/buyTicket",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "TrainPass.Tickets.Dtos.TicketRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "TrainPass.Tickets.Dtos.TicketResponse",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "TrainPass.Tickets.Controllers.ControllerTicket",
     "Method": "BuyTickets",
     "RelativePath": "api/v1/tickets/buyTickets",
     "HttpMethod": "POST",
