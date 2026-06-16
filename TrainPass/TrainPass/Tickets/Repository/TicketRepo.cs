@@ -46,27 +46,29 @@ namespace TrainPass.Tickets.Repository
             };
         }
 
-        public async Task<Ticket> CreateTicket(Ticket ticket)
+        public async Task<List<Ticket>> CreateTickets(List<Ticket> tickets)
         {
-            _db.Tickets.Add(ticket);
-            await _db.SaveChangesAsync();
-            return ticket;
-        }
+            if (tickets == null || tickets.Count == 0)
+            {
+                return new List<Ticket>();
+            }
 
-        public async Task<GetAllTicketsDto> CreateTickets(List<Ticket> tickets)
-        {
             await using var transaction = await _db.Database.BeginTransactionAsync();
 
-            _db.Tickets.AddRange(tickets);
-            await _db.SaveChangesAsync();
-            await transaction.CommitAsync();
-
-            var mappedTickets = _mapper.Map<List<TicketResponse>>(tickets);
-
-            return new GetAllTicketsDto
+            try
             {
-                ticketList = mappedTickets
-            };
+                _db.Tickets.AddRange(tickets);
+                await _db.SaveChangesAsync();
+
+                await transaction.CommitAsync();
+
+                return tickets;
+            }
+            catch
+            {
+                await transaction.RollbackAsync();
+                throw;
+            }
         }
 
         public async Task<bool> TrainScheduleExists(int trainScheduleId)

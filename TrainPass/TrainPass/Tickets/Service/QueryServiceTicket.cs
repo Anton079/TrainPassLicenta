@@ -18,9 +18,7 @@ namespace TrainPass.Tickets.Service
             var tickets = await _repo.GetAllTickets();
 
             if (tickets == null || tickets.ticketList == null || !tickets.ticketList.Any())
-            {
                 throw new TicketNotFoundException();
-            }
 
             return tickets;
         }
@@ -30,9 +28,7 @@ namespace TrainPass.Tickets.Service
             var tickets = await _repo.GetMyTickets(customerId);
 
             if (tickets == null || tickets.ticketList == null || !tickets.ticketList.Any())
-            {
                 throw new TicketNotFoundException();
-            }
 
             return tickets;
         }
@@ -42,9 +38,7 @@ namespace TrainPass.Tickets.Service
             var seatsInfo = await _repo.GetSeatsInfo(trainScheduleId, numberOfSeats);
 
             if (seatsInfo == null)
-            {
                 throw new TrainScheduleNotFoundException();
-            }
 
             return seatsInfo;
         }

@@ -72,42 +72,6 @@ namespace TrainPass.Tickets.Controllers
             }
         }
 
-        [HttpPost("buyTicket")]
-        [Authorize(Roles = "Customer")]
-        public async Task<ActionResult<TicketResponse>> BuyTicket([FromBody] TicketRequest request)
-        {
-            try
-            {
-                var customerId = GetCustomerId();
-
-                if (string.IsNullOrWhiteSpace(customerId))
-                {
-                    return Unauthorized();
-                }
-
-                request.CustomerId = customerId;
-
-                var response = await _command.CreateTicket(request);
-                return Ok(response);
-            }
-            catch (TrainScheduleNotFoundException ex)
-            {
-                return NotFound(ex.Message);
-            }
-            catch (SeatAlreadyTakenException ex)
-            {
-                return BadRequest(ex.Message);
-            }
-            catch (NoAvailableSeatsException ex)
-            {
-                return BadRequest(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
-
         [HttpPost("buyTickets")]
         [Authorize(Roles = "Customer")]
         public async Task<ActionResult<GetAllTicketsDto>> BuyTickets([FromBody] BuyTicketsRequest request)
