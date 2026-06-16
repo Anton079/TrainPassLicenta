@@ -11,7 +11,6 @@ namespace TrainPass.Stations.Controllers
     {
         [ApiController]
         [Route("api/v1/admin/stations")]
-        [Authorize(Roles = "Admin")]
         public class StationController : ControllerBase
         {
             private readonly IQueryServiceStation _querry;

@@ -58,27 +58,19 @@ select:focus {
 }
 
 button {
-    min-height: 44px;
+    min-height: 42px;
     border: none;
     border-radius: 10px;
     background: #2563eb;
     color: white;
-    padding: 0 18px;
-    font-size: 15px;
+    padding: 0 16px;
+    font-size: 14px;
     font-weight: 700;
     cursor: pointer;
 }
 
 button:hover {
     background: #1d4ed8;
-}
-
-.btn-dark {
-    background: #111827;
-}
-
-.btn-dark:hover {
-    background: #030712;
 }
 
 .btn-light {
@@ -89,6 +81,14 @@ button:hover {
 
 .btn-light:hover {
     background: #eff6ff;
+}
+
+.btn-dark {
+    background: #111827;
+}
+
+.btn-dark:hover {
+    background: #030712;
 }
 
 .btn-danger {
@@ -148,19 +148,7 @@ button:hover {
 }
 
 @media print {
-    body * {
-        visibility: hidden;
-    }
-
-    #ticket-card,
-    #ticket-card * {
-        visibility: visible;
-    }
-
-    #ticket-card {
-        position: absolute;
-        left: 20px;
-        top: 20px;
-        width: 420px;
+    body {
+        background: white;
     }
 }

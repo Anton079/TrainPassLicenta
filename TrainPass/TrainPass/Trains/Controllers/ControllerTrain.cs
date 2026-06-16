@@ -26,7 +26,6 @@ namespace TrainPass.Trains.Controllers
             try
             {
                 var result = await _query.GetAllTrains();
-
                 return Ok(result);
             }
             catch (TrainNotFoundException ex)
@@ -40,7 +39,6 @@ namespace TrainPass.Trains.Controllers
         public async Task<ActionResult<TrainResponse>> CreateTrain([FromBody] TrainRequest request)
         {
             var result = await _command.CreateTrain(request);
-
             return Ok(result);
         }
     }

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TrainPass.Stations.Models
 {
-    [Table("station")]
+    [Table("stations")]
     public class Station
     {
         [Key]
